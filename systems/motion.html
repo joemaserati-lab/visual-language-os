@@ -1,3 +1,79 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Motion System — Design OS</title><link rel="stylesheet" href="../assets/css/main.css"></head>
-<body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">Design<br>OS</a><nav class="nav"><a href="../index.html">Home</a><a href="../mindset.html">Mindset</a><a href="typography.html">Typography</a><a class="active" href="motion.html">Motion</a><a href="../patterns/progressive-recognition.html">Progressive Recognition</a><a href="../reference/index.html">Reference</a><a href="../laboratory/index.html">Laboratory</a></nav></aside><main class="content"><p class="eyebrow">System / Motion</p><h1 class="display">Motion must reveal information.</h1><p class="hero-lead">Motion is not decoration. It is a sequencing layer that clarifies hierarchy, state, rhythm and attention.</p><section class="section grid"><div class="span-5"><h2>Motion laws</h2></div><div class="span-7 stack"><div class="rule"><span class="rule-number">M-001</span><span class="rule-title">Motion must have a job.</span><p>Reveal, connect, clarify, orient or confirm. If it does none of these, remove it.</p></div><div class="rule"><span class="rule-number">M-002</span><span class="rule-title">Readability must arrive early.</span><p>Scroll reveals must complete before the element reaches the central focal zone.</p></div><div class="rule"><span class="rule-number">M-003</span><span class="rule-title">No opacity masking for font-state transitions.</span><p>If the purpose is to show transformation, opacity should not hide the effect.</p></div></div></section><section class="section"><h2>Timing bands</h2><p><code>120ms micro / 240ms hover / 480ms reveal / 900–1400ms scroll transformation</code></p></section><footer class="footer">Motion System / v0.1</footer></main></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a class="active" href="motion.html">Motion</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Motion</p>
+      <h1 class="display">Motion must reveal information.</h1>
+      <p class="hero-lead">Motion is not decoration. It is a sequencing layer that clarifies hierarchy, state, rhythm and attention.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Motion Laws</span>
+          <h2>Movement needs a reason.</h2>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">M-001</span><span class="rule-title">Motion must have a job.</span><p>Reveal, connect, clarify, orient or confirm. If it does none of these, remove it.</p></div>
+          <div class="rule"><span class="rule-number">M-002</span><span class="rule-title">Readability must arrive early.</span><p>Scroll reveals complete before the element reaches the central focal zone.</p></div>
+          <div class="rule"><span class="rule-number">M-003</span><span class="rule-title">Transform state, not attention.</span><p>The user should understand what changed, not just notice that something moved.</p></div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Interactive Example</span>
+          <h2>Hover to test sequencing.</h2>
+          <p>The bars lift at different amplitudes. The point is not bounce; the point is reading order.</p>
+        </div>
+        <div class="span-7">
+          <div class="motion-strip" aria-label="Motion timing demonstration">
+            <div class="motion-step"><span>120ms</span><strong>Micro</strong></div>
+            <div class="motion-step"><span>240ms</span><strong>Hover</strong></div>
+            <div class="motion-step"><span>480ms</span><strong>Reveal</strong></div>
+            <div class="motion-step"><span>900ms</span><strong>Scroll</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Timing bands</h2>
+        <div class="token-table">
+          <div class="token-row"><strong>120ms</strong><span>Micro acknowledgement</span><span>Button press, focus change</span></div>
+          <div class="token-row"><strong>240ms</strong><span>Interface transition</span><span>Hover, compact panel, nav state</span></div>
+          <div class="token-row"><strong>480ms</strong><span>Content reveal</span><span>Cards, sections, local transformations</span></div>
+          <div class="token-row"><strong>900-1400ms</strong><span>Scroll transformation</span><span>Progressive recognition, editorial moments</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Do / Don't</h2>
+        <div class="do-dont">
+          <div class="decision-card good"><span class="rule-number">Do</span><h3>Use motion to expose sequence.</h3><p>A section can move from abstract to readable when the transformation reinforces discovery.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use motion to hide weak hierarchy.</h3><p>If the page needs animation to become interesting, the static composition is not strong enough.</p></div>
+        </div>
+      </section>
+
+      <footer class="footer">Motion System / v0.2</footer>
+    </main>
+  </div>
+</body>
+</html>

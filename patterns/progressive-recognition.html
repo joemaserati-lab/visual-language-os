@@ -1,1 +1,72 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Progressive Recognition — Design OS</title><link rel="stylesheet" href="../assets/css/main.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">Design<br>OS</a><nav class="nav"><a href="../index.html">Home</a><a href="../mindset.html">Mindset</a><a href="../systems/typography.html">Typography</a><a href="../systems/motion.html">Motion</a><a class="active" href="progressive-recognition.html">Progressive Recognition</a><a href="../reference/index.html">Reference</a><a href="../laboratory/index.html">Laboratory</a></nav></aside><main class="content"><p class="eyebrow">Pattern 001 / Experimental</p><h1 class="display">Progressive Recognition</h1><p class="hero-lead">A motion pattern where content moves from abstraction to readability. The user first perceives matter, then shape, then word, then meaning.</p><section class="section grid"><div class="span-5"><h2>Intent</h2></div><div class="span-7 stack"><p>Progressive Recognition converts illegibility into a controlled reveal. It works when the transformation itself reinforces the concept of emergence, process or discovery.</p><div class="rule"><span class="rule-number">Sequence</span><span class="rule-title">Noise → Recognition → Interpretation → Reading</span><p>For Redaction: 100 → 70 → 50 → 35. The final state must always be readable.</p></div><div class="rule"><span class="rule-number">Timing</span><span class="rule-title">End before the focal zone.</span><p>The readable state should be reached before the element crosses the central visual zone of the viewport.</p></div><div class="rule"><span class="rule-number">Visibility</span><span class="rule-title">No opacity masking.</span><p>Opacity reduction weakens the perception of font-state transformation. Keep the text visible during the reveal.</p></div></div></section><section class="section"><h2>Live demo</h2><p>Scroll this page. Individual characters change with a pseudo-random stagger, not all at once.</p><div class="demo"><div class="recognition-word" data-progressive-recognition>System</div></div></section><section class="section grid"><div class="span-4 card"><span class="eyebrow">Works for</span><h3>Hero statements</h3><p>Large editorial words with enough space to transform.</p></div><div class="span-4 card"><span class="eyebrow">Risk</span><h3>Small UI</h3><p>Do not use it for navigation, buttons or body copy.</p></div><div class="span-4 card"><span class="eyebrow">Fallback</span><h3>Reduced motion</h3><p>Render directly in Redaction 35 or Geist.</p></div></section><footer class="footer">Pattern 001 / v0.1</footer></main></div><script src="../assets/js/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progressive Recognition — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="../systems/typography.html">Typography</a>
+        <a href="../systems/motion.html">Motion</a>
+        <a class="active" href="progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">Pattern 001 / Experimental</p>
+      <h1 class="display">Progressive Recognition</h1>
+      <p class="hero-lead">A motion pattern where content moves from abstraction to readability. The user first perceives matter, then shape, then word, then meaning.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Pattern Anatomy</span>
+          <h2>Noise becomes language.</h2>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">State 01</span><span class="rule-title">Noise.</span><p>Redaction 100 is used as texture or mass. It signals that information exists before it is readable.</p></div>
+          <div class="rule"><span class="rule-number">State 02</span><span class="rule-title">Recognition.</span><p>Redaction 70 and 50 introduce letterform structure without resolving the whole word too early.</p></div>
+          <div class="rule"><span class="rule-number">State 03</span><span class="rule-title">Reading.</span><p>Redaction 35 is the final state. The pattern fails if the readable state arrives too late.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Sequence Specimen</span>
+        <h2>100 to 35.</h2>
+        <div class="grid">
+          <div class="type-specimen font-100 span-3"><strong>Form</strong><div class="meta"><span>100</span><span>Noise</span></div></div>
+          <div class="type-specimen font-70 span-3"><strong>Form</strong><div class="meta"><span>70</span><span>Shape</span></div></div>
+          <div class="type-specimen font-50 span-3"><strong>Form</strong><div class="meta"><span>50</span><span>Threshold</span></div></div>
+          <div class="type-specimen font-35 span-3"><strong>Form</strong><div class="meta"><span>35</span><span>Read</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Live Demo</span>
+        <h2>Scroll transformation.</h2>
+        <p>Individual characters change with a pseudo-random stagger, not all at once. The word must be readable before it reaches the center of attention.</p>
+        <div class="demo"><div class="recognition-word" data-progressive-recognition>System</div></div>
+      </section>
+
+      <section class="section">
+        <h2>Usage decision</h2>
+        <div class="do-dont">
+          <div class="decision-card good"><span class="rule-number">Use for</span><h3>Hero words and section transitions.</h3><p>Large words with enough spatial presence can transform without damaging comprehension.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Avoid for</span><h3>Navigation, buttons and body copy.</h3><p>Functional text must be readable immediately. Do not make the interface wait for meaning.</p></div>
+        </div>
+      </section>
+
+      <footer class="footer">Pattern 001 / v0.2</footer>
+    </main>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

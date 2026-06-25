@@ -1,3 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typography System — Design OS</title><link rel="stylesheet" href="../assets/css/main.css"></head>
-<body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">Design<br>OS</a><nav class="nav"><a href="../index.html">Home</a><a href="../mindset.html">Mindset</a><a class="active" href="typography.html">Typography</a><a href="motion.html">Motion</a><a href="../patterns/progressive-recognition.html">Progressive Recognition</a><a href="../reference/index.html">Reference</a><a href="../laboratory/index.html">Laboratory</a></nav></aside><main class="content"><p class="eyebrow">System / Typography</p><h1 class="display">Typography is the first interface.</h1><p class="hero-lead">Redaction gives identity. Geist gives clarity. Their roles must never be confused.</p><section class="section grid"><div class="span-5"><h2>Typeface roles</h2></div><div class="span-7 stack"><div class="rule"><span class="rule-number">T-001 / Geist</span><span class="rule-title">Information layer.</span><p>Use Geist for body text, navigation, UI, captions, metadata, forms and anything that must be read quickly.</p></div><div class="rule"><span class="rule-number">T-002 / Redaction 35</span><span class="rule-title">Readable display layer.</span><p>Use Redaction 35 for hero titles, section statements and editorial moments where identity matters but readability must remain intact.</p></div><div class="rule"><span class="rule-number">T-003 / Redaction 50</span><span class="rule-title">Threshold layer.</span><p>Use Redaction 50 only for short words, accents or transition states. It is not safe for long content.</p></div><div class="rule"><span class="rule-number">T-004 / Redaction 70 + 100</span><span class="rule-title">Abstract layer.</span><p>Use Redaction 70 and 100 only as abstract or transition states. They are not final readable typography.</p></div></div></section><section class="section"><h2>Visual scale</h2><p><code>Display XL → Display → H1 → H2 → H3 → Lead → Body → Small</code></p><p>Accessibility and SEO use correct headings. Visual rhythm uses display tokens.</p></section><footer class="footer">Typography System / v0.1</footer></main></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typography System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a class="active" href="typography.html">Typography</a>
+        <a href="motion.html">Motion</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Typography</p>
+      <h1 class="display">Typography is the first interface.</h1>
+      <p class="hero-lead">Redaction gives identity. Geist gives clarity. The system separates expressive display states from readable information states.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Rule Set</span>
+          <h2>Every text style has a job.</h2>
+          <p>Use semantic HTML for structure, then apply visual scale through tokens. The page should still make sense if all colors are removed.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">H1</span><span class="rule-title">One page statement.</span><p>Use one real <code>h1</code> per page. It names the page argument, not just the page category.</p></div>
+          <div class="rule"><span class="rule-number">H2</span><span class="rule-title">Section decision.</span><p>Use <code>h2</code> to mark a new decision layer: system rule, example group, specimen, method or validation block.</p></div>
+          <div class="rule"><span class="rule-number">H3</span><span class="rule-title">Module title.</span><p>Use <code>h3</code> inside cards, examples and small repeated modules. Do not use it as a smaller H2.</p></div>
+          <div class="rule"><span class="rule-number">P</span><span class="rule-title">Explanation layer.</span><p>Paragraphs use Geist because they must be read quickly. Redaction is reserved for high-impact display and transformation states.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Font Specimens</span>
+        <h2>Redaction is not one voice.</h2>
+        <div class="grid">
+          <div class="type-specimen font-35 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 35</span><span>Readable display</span></div></div>
+          <div class="type-specimen font-50 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 50</span><span>Threshold</span></div></div>
+          <div class="type-specimen font-70 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 70</span><span>Abstract</span></div></div>
+          <div class="type-specimen font-100 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 100</span><span>Noise state</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Scale</span>
+        <h2>Heading and paragraph rules.</h2>
+        <div class="type-scale">
+          <div class="scale-row"><span class="label">Display</span><div class="sample scale-display">Primary visual hook</div><small>Use for hero or major campaign statement only.</small></div>
+          <div class="scale-row"><span class="label">H1</span><div class="sample scale-h1">Page argument</div><small>One per page. Redaction 35. Editorial, not decorative.</small></div>
+          <div class="scale-row"><span class="label">H2</span><div class="sample scale-h2">Section decision</div><small>Starts a new conceptual block.</small></div>
+          <div class="scale-row"><span class="label">H3</span><div class="sample scale-h3">Module title</div><small>Cards, examples, grouped rules.</small></div>
+          <div class="scale-row"><span class="label">Lead</span><div class="sample scale-lead">A lead paragraph states the thesis before details arrive.</div><small>Use once near a hero or section opening.</small></div>
+          <div class="scale-row"><span class="label">P</span><div class="sample scale-body">Body copy explains the decision, evidence or instruction in Geist with calm rhythm and enough measure to support reading.</div><small>Default explanation layer.</small></div>
+          <div class="scale-row"><span class="label">Small</span><div class="sample scale-small">Metadata, captions, system labels and interface notes.</div><small>Never carry the main message.</small></div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Example</span>
+          <h2>Hierarchy before color.</h2>
+          <p>This block uses type size, spacing and font role before it uses chromatic contrast.</p>
+        </div>
+        <div class="span-7 example-panel">
+          <span class="microcopy">Reference card</span>
+          <h3 class="example-title">Readable identity first.</h3>
+          <p class="example-lead">The title carries the tone. The paragraph carries the reasoning. The label carries metadata.</p>
+          <p>Good typography makes the reader understand the order of importance before they understand the details.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Do / Don't</h2>
+        <div class="do-dont">
+          <div class="decision-card good"><span class="rule-number">Do</span><h3>Use Redaction 35 for readable display.</h3><p>Large editorial headlines, short statements and brand moments stay readable while still feeling distinct.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use Redaction 100 for body copy.</h3><p>Abstract states belong in motion, texture or transition moments. They are not final reading states.</p></div>
+        </div>
+      </section>
+
+      <footer class="footer">Typography System / v0.2</footer>
+    </main>
+  </div>
+</body>
+</html>
