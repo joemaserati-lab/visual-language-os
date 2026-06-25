@@ -10,6 +10,16 @@ This repository starts as a static documentation site for the Redaction + Geist 
 
 The project is not a template. It is a decision system: rules, anti-patterns, reference implementation and production tokens.
 
+## Deployment
+
+The site is published with GitHub Pages from the `main` branch.
+
+Live URL target:
+
+```txt
+https://joemaserati-lab.github.io/visual-language-os/
+```
+
 ## Font setup
 
 Redaction font files are not committed to the repository.
