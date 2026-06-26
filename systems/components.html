@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Components System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a href="motion.html">Motion</a>
+        <a class="active" href="components.html">Components</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Components</p>
+      <h1 class="display">Interactive states are part of the interface.</h1>
+      <p class="hero-lead">Every interactive component must communicate availability, intent and input feedback before motion or color become the only signal.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Component states</span>
+          <h2>Document the full interaction loop.</h2>
+          <p>Each state is shown as a visual frame with a descriptive label. Use these examples as acceptance criteria for navigation, calls to action, linked cards and interactive badges.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Default</span><span class="rule-title">Available but calm.</span><p>The component is ready to use without competing with page hierarchy.</p></div>
+          <div class="rule"><span class="rule-number">Hover / Active</span><span class="rule-title">Intent and press feedback.</span><p>Hover confirms the target; active confirms that the input is currently being pressed.</p></div>
+          <div class="rule"><span class="rule-number">Focus-visible / Disabled</span><span class="rule-title">Keyboard clarity and unavailable actions.</span><p>Focus must be visible without mouse interaction. Disabled controls must look unavailable and should not be focusable when possible.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Nav link</span>
+        <h2>Navigation links expose location and input state.</h2>
+        <div class="state-demo" aria-label="Navigation link states">
+          <div class="state-frame"><span class="state-label">Default</span><a class="state-nav-link" href="#">Mindset</a></div>
+          <div class="state-frame"><span class="state-label">Hover</span><a class="state-nav-link is-hover" href="#">Mindset</a></div>
+          <div class="state-frame"><span class="state-label">Focus-visible</span><a class="state-nav-link is-focus-visible" href="#">Mindset</a></div>
+          <div class="state-frame"><span class="state-label">Active</span><a class="state-nav-link is-active" href="#">Mindset</a></div>
+          <div class="state-frame"><span class="state-label">Disabled</span><a class="state-nav-link is-disabled" aria-disabled="true">Mindset</a></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Button / CTA</span>
+        <h2>Buttons make action priority explicit.</h2>
+        <div class="state-demo" aria-label="Button states">
+          <div class="state-frame"><span class="state-label">Default primary</span><button class="button primary" type="button">Start system</button></div>
+          <div class="state-frame"><span class="state-label">Hover secondary</span><button class="button secondary is-hover" type="button">Read rules</button></div>
+          <div class="state-frame"><span class="state-label">Focus-visible</span><button class="button primary is-focus-visible" type="button">Start system</button></div>
+          <div class="state-frame"><span class="state-label">Active</span><button class="button primary is-active" type="button">Start system</button></div>
+          <div class="state-frame"><span class="state-label">Disabled</span><button class="button disabled" type="button" disabled>Start system</button></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Card link</span>
+        <h2>Linked cards behave like large targets.</h2>
+        <div class="state-demo" aria-label="Card link states">
+          <a class="state-frame card-link" href="#"><span class="state-label">Default</span><strong>Typography</strong><p>Open the readable identity rules.</p></a>
+          <a class="state-frame card-link is-hover" href="#"><span class="state-label">Hover</span><strong>Typography</strong><p>Surface elevation and underline signal intent.</p></a>
+          <a class="state-frame card-link is-focus-visible" href="#"><span class="state-label">Focus-visible</span><strong>Typography</strong><p>The whole target receives a visible focus ring.</p></a>
+          <a class="state-frame card-link is-active" href="#"><span class="state-label">Active</span><strong>Typography</strong><p>The card compresses to confirm press.</p></a>
+          <article class="state-frame card-link is-disabled" aria-disabled="true"><span class="state-label">Disabled</span><strong>Typography</strong><p>Unavailable cards are muted and not links.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Interactive badge</span>
+        <h2>Badges may filter content when interactive.</h2>
+        <p>Use a static <code>.badge</code> for metadata. Use an interactive badge only when it changes state, filters content or opens a scoped view.</p>
+        <div class="state-demo" aria-label="Interactive badge states">
+          <div class="state-frame"><span class="state-label">Default</span><button class="badge interactive" type="button">Motion</button></div>
+          <div class="state-frame"><span class="state-label">Hover</span><button class="badge interactive is-hover" type="button">Motion</button></div>
+          <div class="state-frame"><span class="state-label">Focus-visible</span><button class="badge interactive is-focus-visible" type="button">Motion</button></div>
+          <div class="state-frame"><span class="state-label">Active</span><button class="badge interactive is-active" type="button">Motion</button></div>
+          <div class="state-frame"><span class="state-label">Disabled</span><button class="badge interactive is-disabled" type="button" disabled>Motion</button></div>
+        </div>
+      </section>
+
+      <footer class="footer">Components System / v0.3</footer>
+    </main>
+  </div>
+</body>
+</html>
