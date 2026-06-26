@@ -122,6 +122,31 @@ h3{font-size:var(--h3)}
 .decision-card.good .rule-number{color:var(--success)}
 .decision-card.bad .rule-number{color:var(--risk)}
 
+.typography-demo{gap:var(--s2);align-items:stretch}
+.typography-demo .decision-card{min-width:0}
+.typography-demo .example-panel{padding:var(--s3);gap:var(--s2)}
+.typography-demo h3,.typography-demo p{margin:0}
+.typography-demo small{display:block;max-width:42ch}
+.line-height-demo h3{font-size:clamp(2rem,4vw,4rem);max-width:9ch}
+.line-height-tight h3{line-height:.76}
+.line-height-compact h3{line-height:.9}
+.line-height-readable p{line-height:1.58}
+.line-height-stable p{line-height:1.45}
+.line-height-loose h3,.line-height-loose p{line-height:1.35}
+.line-height-cramped h3,.line-height-cramped p{line-height:.92}
+.measure-good p{max-width:68ch}
+.measure-good .example-lead{max-width:52ch}
+.measure-good .example-title{max-width:10ch}
+.measure-bad p,.measure-bad .example-lead{max-width:none}
+.measure-bad .example-title{max-width:18ch}
+.tracking-demo h3{font-size:clamp(2.4rem,6vw,6rem);line-height:.82;margin:0}
+.tracking-negative h3{letter-spacing:-.08em}
+.tracking-positive h3,.tracking-positive p{letter-spacing:.12em}
+.tracking-label .microcopy,.tracking-label .uppercase-paragraph{letter-spacing:.14em;text-transform:uppercase}
+.tracking-none h3,.tracking-none p{letter-spacing:0}
+.forbidden-body{font-family:'Redaction 100';font-size:2.2rem;line-height:.95;letter-spacing:-.05em;color:var(--ink)}
+.uppercase-paragraph{text-transform:uppercase;font-size:.9rem;line-height:1.35}
+
 .token-table{border:1px solid var(--line);background:var(--paper)}
 .token-row{display:grid;grid-template-columns:minmax(120px,180px) 1fr minmax(120px,220px);gap:var(--s3);padding:var(--s2) var(--s3);border-bottom:1px solid var(--line);align-items:center}
 .token-row:last-child{border-bottom:0}
