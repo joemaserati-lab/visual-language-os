@@ -57,6 +57,7 @@ assets/fonts/
 Expected names:
 
 ```txt
+Redaction_20-Regular.woff2
 Redaction_35-Regular.woff2
 Redaction_50-Regular.woff2
 Redaction_70-Regular.woff2
@@ -66,6 +67,8 @@ Redaction_100-Regular.woff2
 Geist is loaded from Google Fonts.
 
 ## Core Typographic Decision
+
+Redaction 20 is the XXL display face for hero-scale titles where Redaction 35 becomes too pixelated.
 
 Redaction 100 and 70 are not static display fonts. They are transitional states only.
 
