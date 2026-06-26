@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Components System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a href="motion.html">Motion</a>
+        <a class="active" href="components.html">Components</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Components</p>
+      <h1 class="display">Components translate rules into interface decisions.</h1>
+      <p class="hero-lead">The component layer keeps visual language consistent without turning the system into a template. Each module has a purpose, usage boundary and visible proof.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Component Laws</span>
+          <h2>Reusable does not mean generic.</h2>
+          <p>Components should make decisions repeatable: hierarchy, density, emphasis and action all stay traceable to the same operating rules.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">C-001</span><span class="rule-title">Start with purpose.</span><p>Choose a component because it clarifies a job: action, status, grouping, evidence, navigation or conversion.</p></div>
+          <div class="rule"><span class="rule-number">C-002</span><span class="rule-title">Reuse the smallest stable pattern.</span><p>Do not invent a new block when an existing card, badge, rule or table already expresses the decision.</p></div>
+          <div class="rule"><span class="rule-number">C-003</span><span class="rule-title">Variants must reduce ambiguity.</span><p>Default, compact, emphasis and dark states should signal context, not personal preference.</p></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="button">
+        <div class="span-5">
+          <span class="badge">Button</span>
+          <h2>Button</h2>
+          <p><strong>Purpose.</strong> Trigger one clear action, especially when the user is expected to commit, continue or contact.</p>
+          <p><strong>Use rules.</strong> Keep labels short and verb-led. Use one emphasis button per decision area. Let spacing make the action visible before color does.</p>
+          <p><strong>Avoid when.</strong> The target is pure navigation, repeated metadata or a secondary text reference.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 example-panel component-example-grid">
+          <a class="button" href="#button">Read system</a>
+          <a class="button compact" href="#button">Save</a>
+          <a class="button emphasis" href="#button">Start project</a>
+          <div class="example-panel dark compact-panel"><a class="button dark" href="#button">Contact</a></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="badge">
+        <div class="span-5">
+          <span class="badge">Badge</span>
+          <h2>Badge</h2>
+          <p><strong>Purpose.</strong> Label status, category or system role without competing with headings.</p>
+          <p><strong>Use rules.</strong> Keep text uppercase and brief. Place before a heading, inside a specimen or as a small state marker.</p>
+          <p><strong>Avoid when.</strong> The label becomes the primary message or carries complex instructions.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 example-panel component-example-grid">
+          <span class="badge">Default</span>
+          <span class="badge compact-badge">Compact</span>
+          <span class="badge emphasis-badge">Validated</span>
+          <div class="example-panel dark compact-panel"><span class="badge">Dark</span></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="card">
+        <div class="span-5">
+          <span class="badge">Card</span>
+          <h2>Card</h2>
+          <p><strong>Purpose.</strong> Group one idea, rule or destination into a contained reading unit.</p>
+          <p><strong>Use rules.</strong> Use a clear eyebrow, title and short explanation. Cards should compare well in a grid and not depend on decoration.</p>
+          <p><strong>Avoid when.</strong> Content needs sequential reading, dense tabular comparison or a primary narrative flow.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 grid">
+          <div class="card span-6"><span class="eyebrow">Default</span><h3>Stable module</h3><p>One idea with enough space to breathe.</p></div>
+          <div class="card compact-card span-6"><span class="eyebrow">Compact</span><h3>Short module</h3><p>Reduced density for repeated lists.</p></div>
+          <div class="card emphasis-card span-6"><span class="eyebrow">Emphasis</span><h3>Priority module</h3><p>A stronger border marks a higher-value decision.</p></div>
+          <div class="example-panel dark span-6"><span class="microcopy">Dark</span><h3>Inverse module</h3><p>Use only where the surrounding section already supports dark contrast.</p></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="rule-block">
+        <div class="span-5">
+          <span class="badge">Rule Block</span>
+          <h2>Rule block</h2>
+          <p><strong>Purpose.</strong> Codify a decision as a named law, checklist item or operating principle.</p>
+          <p><strong>Use rules.</strong> Pair a compact identifier with a decisive title and one explanatory paragraph.</p>
+          <p><strong>Avoid when.</strong> The content is promotional, optional commentary or a long essay.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">R-001</span><span class="rule-title">Hierarchy must exist before color.</span><p>Structure carries comprehension first.</p></div>
+          <div class="rule compact-rule"><span class="rule-number">Compact</span><span class="rule-title">Name the decision.</span><p>Use for short repeated principles.</p></div>
+          <div class="rule emphasis-rule"><span class="rule-number">Emphasis</span><span class="rule-title">This rule changes behavior.</span><p>Use emphasis only when the rule prevents misuse.</p></div>
+          <div class="example-panel dark"><div class="rule"><span class="rule-number">Dark</span><span class="rule-title">Inverse rules need space.</span><p>Keep contrast strong and copy short.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="token-table">
+        <div class="span-5">
+          <span class="badge">Token Table</span>
+          <h2>Token table</h2>
+          <p><strong>Purpose.</strong> Compare tokens, timings or named values in a scannable structure.</p>
+          <p><strong>Use rules.</strong> Keep columns predictable: token, role and usage. Make values more prominent than descriptions.</p>
+          <p><strong>Avoid when.</strong> The content is narrative or each row needs a different structure.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 token-table">
+          <div class="token-row"><strong>Default</strong><span>Standard row rhythm</span><span>System pages</span></div>
+          <div class="token-row compact-token"><strong>Compact</strong><span>Reduced row padding</span><span>Dense references</span></div>
+          <div class="token-row emphasis-token"><strong>Emphasis</strong><span>Critical token</span><span>Decision gates</span></div>
+          <div class="token-row dark-token"><strong>Dark</strong><span>Inverse context</span><span>Dark sections</span></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="project-card">
+        <div class="span-5">
+          <span class="badge">Project Card</span>
+          <h2>Project card</h2>
+          <p><strong>Purpose.</strong> Preview a project, case study or reference item with editorial weight.</p>
+          <p><strong>Use rules.</strong> Use a short eyebrow, a strong descriptive title and a clear destination cue.</p>
+          <p><strong>Avoid when.</strong> The item is a small utility link, generic list entry or text-only reference.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 grid">
+          <div class="project-card span-6"><span class="eyebrow">Default / 2026</span><strong>Interface system for readable visual identity.</strong><span>Case study</span></div>
+          <div class="project-card compact-project span-6"><span class="eyebrow">Compact</span><strong>Small reference card.</strong><span>Open</span></div>
+          <div class="project-card emphasis-project span-6"><span class="eyebrow">Emphasis</span><strong>Featured implementation with stronger contrast.</strong><span>Featured</span></div>
+          <div class="project-card dark-project span-6"><span class="eyebrow">Dark</span><strong>Inverse case study preview.</strong><span>Explore</span></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="cta-block">
+        <div class="span-5">
+          <span class="badge">CTA Block</span>
+          <h2>CTA block</h2>
+          <p><strong>Purpose.</strong> Close a page section with one focused action and a concise reason to act.</p>
+          <p><strong>Use rules.</strong> Use one statement, one supporting paragraph and one action. Keep competing links out of the block.</p>
+          <p><strong>Avoid when.</strong> The user still needs comparison, education or multiple decision paths.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="example-panel"><span class="microcopy">Default CTA</span><h3 class="example-title">Build the next reference page.</h3><p class="example-lead">Turn a validated rule into a visible module.</p><a class="button" href="#cta-block">Continue</a></div>
+          <div class="example-panel compact-panel"><span class="microcopy">Compact CTA</span><h3>Need the short version?</h3><a class="button compact" href="#cta-block">Open</a></div>
+          <div class="example-panel emphasis-panel"><span class="microcopy">Emphasis CTA</span><h3 class="example-title">Make the decision visible.</h3><a class="button emphasis" href="#cta-block">Apply rule</a></div>
+          <div class="example-panel dark"><span class="microcopy">Dark CTA</span><h3 class="example-title">Ready for selected projects.</h3><p class="example-lead">Use inverse contrast for final, high-commitment moments.</p><a class="button dark" href="#cta-block">Contact</a></div>
+        </div>
+      </section>
+
+      <section class="section component-spec grid" id="navigation-item">
+        <div class="span-5">
+          <span class="badge">Navigation Item</span>
+          <h2>Navigation item</h2>
+          <p><strong>Purpose.</strong> Move users between stable sections while showing the current location.</p>
+          <p><strong>Use rules.</strong> Keep labels noun-based, short and consistent. Active state should be clear without needing animation.</p>
+          <p><strong>Avoid when.</strong> The destination is temporary, promotional or better represented as an action button.</p>
+          <p><strong>Variants.</strong> Default, compact, emphasis, dark.</p>
+        </div>
+        <div class="span-7 example-panel component-nav-demo">
+          <a href="#navigation-item">Default item</a>
+          <a class="compact-nav" href="#navigation-item">Compact</a>
+          <a class="active" href="#navigation-item">Emphasis active</a>
+          <div class="example-panel dark compact-panel"><a class="dark-nav" href="#navigation-item">Dark item</a></div>
+        </div>
+      </section>
+
+      <footer class="footer">Components System / v0.2</footer>
+    </main>
+  </div>
+</body>
+</html>
