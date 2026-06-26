@@ -54,6 +54,124 @@
         </div>
       </section>
 
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Easing rules</span>
+          <h2>Curves should feel calm, not decorative.</h2>
+          <ul>
+            <li>Use soft curves for reveals so content arrives without snapping.</li>
+            <li>Avoid decorative bounce; it adds personality without adding comprehension.</li>
+            <li>Use linear transitions only for technical transformations such as scrubbing, meters or synchronized geometry.</li>
+          </ul>
+        </div>
+        <div class="span-7">
+          <div class="motion-strip easing-demo" aria-label="Easing curve demonstration">
+            <div class="motion-step"><span>Soft</span><strong>Reveal</strong></div>
+            <div class="motion-step"><span>No</span><strong>Bounce</strong></div>
+            <div class="motion-step"><span>Linear</span><strong>Technical</strong></div>
+            <div class="motion-step"><span>Clear</span><strong>Rest</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Trigger rules</span>
+          <h2>Interaction decides when motion is allowed.</h2>
+          <ul>
+            <li>Hover is for local states.</li>
+            <li>Scroll is for editorial sequences.</li>
+            <li>Focus is for accessibility and keyboard orientation.</li>
+            <li>Click or tap is for interface confirmations.</li>
+          </ul>
+        </div>
+        <div class="span-7">
+          <div class="motion-strip trigger-demo" aria-label="Trigger rules demonstration">
+            <div class="motion-step"><span>Hover</span><strong>Local</strong></div>
+            <div class="motion-step"><span>Scroll</span><strong>Editorial</strong></div>
+            <div class="motion-step"><span>Focus</span><strong>A11y</strong></div>
+            <div class="motion-step"><span>Tap</span><strong>Confirm</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Motion hierarchy</span>
+          <h2>Scale motion to the size of the decision.</h2>
+          <ul>
+            <li>Micro motion confirms a single state change.</li>
+            <li>Component motion clarifies one reusable module.</li>
+            <li>Section motion sequences a group of related content.</li>
+            <li>Page motion orients the user during large context changes.</li>
+          </ul>
+        </div>
+        <div class="span-7">
+          <div class="motion-strip motion-hierarchy-demo" aria-label="Motion hierarchy demonstration">
+            <div class="motion-step"><span>Micro</span><strong>State</strong></div>
+            <div class="motion-step"><span>Component</span><strong>Module</strong></div>
+            <div class="motion-step"><span>Section</span><strong>Sequence</strong></div>
+            <div class="motion-step"><span>Page</span><strong>Orient</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Reduced motion</span>
+          <h2>The static version must still communicate.</h2>
+          <ul>
+            <li>Content must remain readable without animation.</li>
+            <li>No information may depend only on movement.</li>
+          </ul>
+        </div>
+        <div class="span-7">
+          <div class="motion-strip stagger-demo" aria-label="Reduced-motion fallback demonstration">
+            <div class="motion-step"><span>1</span><strong>Visible</strong></div>
+            <div class="motion-step"><span>2</span><strong>Readable</strong></div>
+            <div class="motion-step"><span>3</span><strong>Ordered</strong></div>
+            <div class="motion-step"><span>4</span><strong>Complete</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid">
+          <div class="span-5">
+            <span class="badge">Forbidden motion</span>
+            <h2>Some movement is never worth the cost.</h2>
+            <ul>
+              <li>No motion on body copy.</li>
+              <li>No delays on navigation.</li>
+              <li>No reveal that hides essential content.</li>
+              <li>No unnecessary decorative loops.</li>
+            </ul>
+          </div>
+          <div class="span-7">
+            <div class="do-dont">
+              <div class="decision-card good">
+                <span class="rule-number">Do</span>
+                <h3>Show the content first.</h3>
+                <p>Use motion to support state, sequence and confirmation after the hierarchy is already readable.</p>
+                <div class="motion-strip">
+                  <div class="motion-step"><span>State</span><strong>Clear</strong></div>
+                  <div class="motion-step"><span>Copy</span><strong>Still</strong></div>
+                </div>
+              </div>
+              <div class="decision-card bad">
+                <span class="rule-number">Don't</span>
+                <h3>Make reading wait.</h3>
+                <p>A loop, delayed nav or hidden paragraph turns motion into friction instead of orientation.</p>
+                <div class="motion-strip">
+                  <div class="motion-step"><span>Delay</span><strong>Nav</strong></div>
+                  <div class="motion-step"><span>Loop</span><strong>Noise</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <h2>Timing bands</h2>
         <div class="token-table">
