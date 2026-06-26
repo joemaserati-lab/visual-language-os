@@ -128,6 +128,14 @@ h3{font-size:var(--h3)}
 .token-row strong{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
 .token-row span{color:var(--muted)}
 
+.token-row:has(.color-swatch),.token-row:has(.spacing-token-demo),.token-row:has(.type-token-demo){grid-template-columns:minmax(120px,180px) minmax(150px,1fr) minmax(180px,1.2fr) minmax(140px,220px)}
+.color-token{min-height:92px}
+.color-swatch{min-height:56px;border:1px solid var(--line);background:var(--swatch);box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
+.spacing-token-demo{height:34px;border:1px solid var(--line);background:linear-gradient(90deg,var(--ink) 0 var(--space),transparent var(--space));position:relative;overflow:hidden}
+.spacing-token-demo::after{content:"";position:absolute;left:var(--space);top:0;bottom:0;border-left:1px dashed rgba(20,17,15,.28)}
+.type-token-demo{font-family:var(--font-display);line-height:.78;letter-spacing:-.06em;color:var(--ink);white-space:nowrap;overflow:hidden;max-height:120px}
+.type-token-demo.text-font{font-family:var(--font-text);letter-spacing:-.02em;line-height:1}
+
 .motion-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);min-height:260px;border:1px solid var(--line);background:var(--paper);padding:var(--s3);align-items:end;overflow:hidden}
 .motion-step{height:var(--height,40%);background:#14110f;color:#f6efe4;padding:var(--s2);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s2);transition:transform 480ms cubic-bezier(.16,1,.3,1),opacity 480ms ease}
 .motion-strip:hover .motion-step{transform:translateY(calc(var(--move,0) * -1px));opacity:var(--opacity,1)}
@@ -162,7 +170,7 @@ h3{font-size:var(--h3)}
   .grid{grid-template-columns:1fr}
   .span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:auto}
   .display{font-size:clamp(4.2rem,22vw,7rem)}
-  .scale-row,.token-row,.contrast-sample,.do-dont,.process-board{grid-template-columns:1fr}
+  .scale-row,.token-row,.token-row:has(.color-swatch),.token-row:has(.spacing-token-demo),.token-row:has(.type-token-demo),.contrast-sample,.do-dont,.process-board{grid-template-columns:1fr}
   .process-step{border-right:0;border-bottom:1px solid var(--line)}
   .process-step:last-child{border-bottom:0}
   .motion-strip{grid-template-columns:1fr 1fr}
