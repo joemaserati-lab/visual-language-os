@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a href="motion.html">Motion</a>
+        <a class="active" href="accessibility.html">Accessibility</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Accessibility</p>
+      <h1 class="display">Access is part of the visual language.</h1>
+      <p class="hero-lead">Every accessibility rule must be visible, testable and resilient when motion, fonts, color, pointer input or perfect reading conditions are unavailable.</p>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Operating principle</span>
+          <h2>Readable before expressive.</h2>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">A-000</span><span class="rule-title">The fallback state is the design.</span><p>Accessibility is not a remediation layer. The page must still communicate hierarchy, state and action when the most expressive visual layer is removed.</p></div>
+          <div class="rule"><span class="rule-number">A-000</span><span class="rule-title">Do not encode meaning once.</span><p>Use text, structure, shape, spacing and symbols together so no single sensory cue carries the whole message.</p></div>
+        </div>
+      </section>
+
+      <section class="section accessibility-rule" id="reduced-motion">
+        <div class="rule-intro">
+          <span class="rule-number">A-001</span>
+          <h2>Reduced motion</h2>
+          <p>Motion may reveal sequence, but it must never be required to read content. Respect <code>prefers-reduced-motion</code>, keep the final state available immediately and avoid large parallax or vestibular movement for essential information.</p>
+        </div>
+        <div class="do-dont accessibility-demo motion-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Stable state</span><div class="motion-preview calm"><strong>Step 2 is visible</strong><span>Label + number explain progress.</span></div><p>The message is readable without waiting for animation.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Motion-only reveal</span><div class="motion-preview intense"><strong>Hidden until spin</strong><span>Meaning depends on movement.</span></div><p>The user must tolerate motion to discover the state.</p></div>
+        </div>
+        <ul class="checklist"><li>Reduced-motion preference disables non-essential transitions.</li><li>Content is present in the DOM before animation starts.</li><li>Animated state changes also include text labels or fixed indicators.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="font-fallback">
+        <div class="rule-intro">
+          <span class="rule-number">A-002</span>
+          <h2>Font fallback</h2>
+          <p>Brand fonts can fail or load late. Fallback stacks must preserve size, rhythm and legibility so the interface remains stable with system fonts.</p>
+        </div>
+        <div class="do-dont accessibility-demo semantic-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Fallback stack</span><div class="font-preview good-font"><strong>System-ready headline</strong><span>Redaction → Geist → system-ui → sans-serif</span></div><p>The same hierarchy survives custom font failure.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Fragile font</span><div class="font-preview bad-font"><strong>Compressed identity</strong><span>Single decorative face, no usable fallback.</span></div><p>The design depends on one file to remain legible.</p></div>
+        </div>
+        <ul class="checklist"><li>Every font family includes readable fallbacks.</li><li><code>font-display: swap</code> or equivalent avoids invisible text.</li><li>Line-height and spacing work with both brand and system fonts.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="color-contrast">
+        <div class="rule-intro">
+          <span class="rule-number">A-003</span>
+          <h2>Color contrast</h2>
+          <p>Text, icons and component states need enough luminance contrast against their backgrounds. Contrast supports fatigue-free reading and must be checked in normal, hover, focus and disabled states.</p>
+        </div>
+        <div class="do-dont accessibility-demo contrast-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ 12.7:1</span><div class="contrast-swatch pass"><strong>Readable label</strong><span>PASS badge + underline pattern</span></div><p>High contrast is reinforced by a written PASS marker.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ 2.1:1</span><div class="contrast-swatch fail"><strong>Faint label</strong><span>FAIL badge + dotted pattern</span></div><p>Low contrast is identified by text and pattern, not color alone.</p></div>
+        </div>
+        <ul class="checklist"><li>Body text and UI labels meet expected contrast thresholds.</li><li>Critical states are checked on their real backgrounds.</li><li>Disabled styles remain distinguishable without becoming unreadable.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="link-recognition">
+        <div class="rule-intro">
+          <span class="rule-number">A-004</span>
+          <h2>Link recognition</h2>
+          <p>Links must look interactive in running text. Do not rely on color alone; use underlines, icons, weight, spacing or explicit action copy.</p>
+        </div>
+        <div class="do-dont accessibility-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Text + underline</span><p class="link-preview">Read the <a href="#link-recognition">accessibility checklist ↗</a> before release.</p><p>The underline and arrow identify the link without color.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Color-only</span><p class="link-preview muted-link">Read the <span>accessibility checklist</span> before release.</p><p>The colored words have no persistent affordance or semantic link.</p></div>
+        </div>
+        <ul class="checklist"><li>Inline links are underlined or otherwise visibly marked.</li><li>Link text describes destination or action.</li><li>Hover and focus states add cues beyond color.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="semantic-heading-structure">
+        <div class="rule-intro">
+          <span class="rule-number">A-005</span>
+          <h2>Semantic heading structure</h2>
+          <p>Headings are navigation landmarks for assistive technology and scanning readers. Use one logical <code>h1</code>, then ordered sections without skipping levels for visual size.</p>
+        </div>
+        <div class="do-dont accessibility-demo semantic-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Ordered outline</span><ol class="outline-demo"><li>h1 Page title</li><li>h2 System rule</li><li>h3 Checklist detail</li></ol><p>Visual scale follows semantic order.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Skipped levels</span><ol class="outline-demo broken"><li>h1 Page title</li><li>h4 Big-looking section</li><li>h2 Nested detail</li></ol><p>Screen-reader navigation becomes unpredictable.</p></div>
+        </div>
+        <ul class="checklist"><li>There is one primary page heading.</li><li>Heading levels increase by one level at a time.</li><li>Do not choose heading tags for visual size only.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="keyboard-focus">
+        <div class="rule-intro">
+          <span class="rule-number">A-006</span>
+          <h2>Keyboard focus</h2>
+          <p>Every interactive element must be reachable and visibly focused with a keyboard. Focus indicators need shape, thickness and offset so they are visible in light and dark contexts.</p>
+        </div>
+        <div class="do-dont accessibility-demo focus-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Visible focus</span><button class="demo-button focused">Continue <span>↵</span></button><p>The outline, offset and key symbol show current position.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Hidden focus</span><button class="demo-button no-focus">Continue</button><p>The button gives no keyboard location cue.</p></div>
+        </div>
+        <ul class="checklist"><li>Tab order follows the visual reading order.</li><li>Focus is never removed without a stronger replacement.</li><li>Custom controls support Enter, Space and expected arrow-key behavior.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="text-readability">
+        <div class="rule-intro">
+          <span class="rule-number">A-007</span>
+          <h2>Text readability</h2>
+          <p>Readable text uses comfortable line length, line-height, spacing and plain language. Editorial tone should not force users to decode dense blocks or tiny type.</p>
+        </div>
+        <div class="do-dont accessibility-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Comfortable measure</span><p class="readability good-read">Short paragraphs, clear labels and generous line-height make the page easier to scan, translate and revisit.</p><p>Structure reduces cognitive load.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Dense block</span><p class="readability bad-read">Long uninterrupted paragraphs with compressed spacing and wide measures make it difficult to retain place, compare options or recover after interruption.</p><p>Density hides meaning.</p></div>
+        </div>
+        <ul class="checklist"><li>Body copy stays near 45–75 characters per line.</li><li>Line-height supports scanning and zoom.</li><li>Paragraphs, lists and labels are written in direct language.</li></ul>
+      </section>
+
+      <section class="section accessibility-rule" id="non-reliance-on-color">
+        <div class="rule-intro">
+          <span class="rule-number">A-008</span>
+          <h2>Non-reliance on color</h2>
+          <p>Color can support status, priority and grouping, but it cannot be the only signal. Pair color with text, icons, patterns, borders or placement.</p>
+        </div>
+        <div class="do-dont accessibility-demo contrast-demo">
+          <div class="decision-card good"><span class="rule-number">Correct ✓ Multi-signal status</span><div class="status-card pass"><strong>✓ Approved</strong><span>Solid border + PASS label + check icon</span></div><p>Status remains clear in grayscale.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Incorrect ✕ Color-only status</span><div class="status-card color-only"><strong>Status</strong><span>Meaning is implied only by hue.</span></div><p>Users who cannot distinguish the hue lose the message.</p></div>
+        </div>
+        <ul class="checklist"><li>Status indicators include text or symbols.</li><li>Charts and diagrams use labels, patterns or direct annotation.</li><li>Error and success states are understandable in grayscale.</li></ul>
+      </section>
+
+      <footer class="footer">Accessibility System / v0.1</footer>
+    </main>
+  </div>
+</body>
+</html>
