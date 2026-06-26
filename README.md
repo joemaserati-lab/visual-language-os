@@ -1,14 +1,40 @@
 # Visual Language OS
 
-Personal documentation system for typography, layout, motion and design rules.
+Personal documentation system for typography, layout, motion, components and web design rules.
 
-Current version: `v0.1 — Typography + Motion Foundations`
+Current version: `v0.2 — Web Guidelines + Component Foundations`
 
 ## Scope
 
-This repository starts as a static documentation site for the Redaction + Geist typography system.
+This repository is a static documentation site for the Redaction + Geist visual language system.
 
-The project is not a template. It is a decision system: rules, anti-patterns, reference implementation and production tokens.
+The project is not a template. It is a decision system: principles, rules, anti-patterns, reference implementations and production guidelines.
+
+## Web guidelines
+
+Use [`WEB-GUIDELINES.md`](WEB-GUIDELINES.md) as the operating document for building and reviewing pages.
+
+The guide covers:
+
+- Page structure
+- Typography rules
+- Motion rules
+- Component usage
+- Content writing rules
+- Accessibility and fallbacks
+- Production checklist
+- Do / Don't rules
+
+## Site map
+
+- `index.html` — System overview
+- `mindset.html` — Decision process
+- `systems/typography.html` — Typography system
+- `systems/motion.html` — Motion system
+- `systems/components.html` — Component system
+- `patterns/progressive-recognition.html` — Core motion pattern
+- `reference/index.html` — Reference implementation
+- `laboratory/index.html` — Experiments and validation flow
 
 ## Deployment
 
@@ -20,11 +46,9 @@ Live URL target:
 https://joemaserati-lab.github.io/visual-language-os/
 ```
 
-## Font setup
+## Font Setup
 
-Redaction font files are not committed to the repository.
-
-Add your licensed `.woff2` files inside:
+Redaction font files are stored in:
 
 ```txt
 assets/fonts/
@@ -41,14 +65,14 @@ Redaction_100-Regular.woff2
 
 Geist is loaded from Google Fonts.
 
-## Core typographic decision
+## Core Typographic Decision
 
 Redaction 100 and 70 are not static display fonts. They are transitional states only.
 
 Recommended motion sequence:
 
 ```txt
-Redaction 100 → Redaction 70 → Redaction 50 → Redaction 35
+Redaction 100 -> Redaction 70 -> Redaction 50 -> Redaction 35
 ```
 
 The transition must complete before the element reaches the user's visual focal zone.
