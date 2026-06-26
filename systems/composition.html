@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Composition System — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a href="motion.html">Motion</a>
+        <a class="active" href="composition.html">Composition</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Composition</p>
+      <h1 class="display">Space gives the interface a voice.</h1>
+      <p class="hero-lead">Composition controls pace, focus and confidence. Use spacing, grid, measure and alignment as active design decisions, not as leftover layout details.</p>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">01 / Section spacing</span>
+          <h2>Sections need enough distance to reset attention.</h2>
+          <p>Vertical padding marks a meaningful change in topic. Tight sections feel accidental because the reader cannot tell whether content belongs to the previous idea or begins a new one.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="space-demo tight">
+            <span>Too little padding</span>
+            <strong>Section title</strong>
+            <p>The content starts before the eye has had time to reset.</p>
+          </div>
+          <div class="space-demo correct">
+            <span>Correct spacing</span>
+            <strong>Section title</strong>
+            <p>Generous vertical padding creates a clean opening and a deliberate pause.</p>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Use large section padding for new ideas.</h3><p>Give each major block a clear entrance and exit.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Stack unrelated sections too tightly.</h3><p>Crowded transitions make hierarchy feel weak.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">02 / Vertical rhythm</span>
+          <h2>Repeated spacing creates reading momentum.</h2>
+          <p>Use a predictable rhythm between labels, headings, paragraphs and actions. Rhythm should be varied only when the meaning changes.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="rhythm-demo">
+            <div class="rhythm-line short"></div>
+            <div class="rhythm-line medium"></div>
+            <div class="rhythm-gap"></div>
+            <div class="rhythm-line long"></div>
+            <div class="rhythm-line medium"></div>
+            <div class="rhythm-gap large"></div>
+            <div class="rhythm-line short"></div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Build from the spacing scale.</h3><p>Use repeated intervals so modules feel related.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Mix arbitrary gaps.</h3><p>Random spacing makes the page feel uncomposed.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">03 / Grid usage</span>
+          <h2>The 12 column grid is a relationship system.</h2>
+          <p>Use columns to define proportion, not decoration. Combining spans makes asymmetry controlled: <code>span-4</code> for compact modules, <code>span-5</code> and <code>span-7</code> for editorial balance.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="grid-demo">
+            <div class="grid-columns" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="grid-item demo-span-4">span-4</div>
+            <div class="grid-item demo-span-5">span-5</div>
+            <div class="grid-item demo-span-7">span-7</div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Use spans to express priority.</h3><p>Let important content occupy wider relationships.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Fill columns just because they exist.</h3><p>The grid should clarify, not create noise.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">04 / Content width</span>
+          <h2>Measure protects comprehension.</h2>
+          <p>Text blocks need a readable line length. Wide paragraphs slow scanning because the eye travels too far before returning to the next line.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="measure-demo">
+            <div class="measure-sample correct"><span>Correct measure</span><p>Readable content width keeps the paragraph calm, focused and easy to scan across multiple lines without losing the next starting point.</p></div>
+            <div class="measure-sample wide"><span>Too wide</span><p>When a paragraph stretches across the full available canvas, the line length becomes tiring and the reader must work harder to track each return from the end of one line to the beginning of the next.</p></div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Keep body copy near a readable measure.</h3><p>Use width constraints for paragraphs and notes.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Let long text fill every container.</h3><p>Full-width prose reduces reading comfort.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">05 / Negative space</span>
+          <h2>Empty space is how importance becomes visible.</h2>
+          <p>Negative space separates the primary message from supporting details. It gives the eye a place to rest before it commits to the next action.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="negative-space-demo">
+            <div class="negative-object">Focus</div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Leave intentional empty areas.</h3><p>Space can be the strongest hierarchy cue.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Fill every visible gap.</h3><p>Overfilling removes focus and weakens contrast.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">06 / Density control</span>
+          <h2>Density should match the decision state.</h2>
+          <p>Dense cards are useful for comparison and scanning, but they should not make the reader fight for meaning. Add internal spacing when content needs reflection.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="density-demo">
+            <div class="density-card dense"><span>Too dense</span><strong>System note</strong><p>Labels, title, body and actions are squeezed into one block.</p><button>Action</button></div>
+            <div class="density-card balanced"><span>Correct spacing</span><strong>System note</strong><p>Each layer has room, making the same information easier to understand.</p><button>Action</button></div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Open spacing around complex content.</h3><p>Give each element a recognizable role.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Compress every card to save space.</h3><p>Efficiency without readability creates friction.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">07 / Alignment</span>
+          <h2>Alignment makes separate elements feel designed together.</h2>
+          <p>Shared edges create trust. Break alignment only when the break has a clear visual or narrative purpose.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="alignment-demo">
+            <div class="align-card good-align"><span></span><span></span><span></span></div>
+            <div class="align-card bad-align"><span></span><span></span><span></span></div>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Share edges across related content.</h3><p>Aligned starts and ends reduce visual effort.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Let modules drift without reason.</h3><p>Misalignment reads as accidental before it reads as expressive.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid composition-rule">
+        <div class="span-5">
+          <span class="badge">08 / Visual breathing room</span>
+          <h2>Interfaces need pauses between moments of emphasis.</h2>
+          <p>Breathing room is the combination of padding, line-height, margins and quiet surfaces. It prevents every element from competing at the same volume.</p>
+        </div>
+        <div class="span-7 stack">
+          <div class="breathing-demo">
+            <span class="microcopy">Calm surface</span>
+            <h3>One clear idea at a time.</h3>
+            <p>When the surrounding space is quiet, the message can be strong without becoming loud.</p>
+          </div>
+          <div class="do-dont compact">
+            <div class="decision-card good"><span class="rule-number">Do</span><h3>Use calm areas around focal content.</h3><p>Let important moments breathe before the next module begins.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Put every element in competition.</h3><p>Constant emphasis makes emphasis disappear.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">Composition System / v0.1</footer>
+    </main>
+  </div>
+</body>
+</html>
