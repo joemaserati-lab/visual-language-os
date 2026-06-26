@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&display=swap');
 
 @font-face{font-family:'Redaction 20';src:url('../fonts/Redaction_20-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Redaction 20 Italic';src:url('../fonts/Redaction_20-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
 @font-face{font-family:'Redaction 35';src:url('../fonts/Redaction_35-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Redaction 35 Italic';src:url('../fonts/Redaction_35-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
 @font-face{font-family:'Redaction 50';src:url('../fonts/Redaction_50-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 @font-face{font-family:'Redaction 70';src:url('../fonts/Redaction_70-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 @font-face{font-family:'Redaction 100';src:url('../fonts/Redaction_100-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
@@ -18,7 +20,9 @@
   --risk:#8a2f22;
   --font-text:'Geist',system-ui,sans-serif;
   --font-display-xxl:'Redaction 20','Redaction 35','Geist',system-ui,sans-serif;
+  --font-display-xxl-italic:'Redaction 20 Italic','Redaction 20','Redaction 35','Geist',system-ui,sans-serif;
   --font-display:'Redaction 35','Geist',system-ui,sans-serif;
+  --font-display-italic:'Redaction 35 Italic','Redaction 35','Geist',system-ui,sans-serif;
   --s1:.5rem;
   --s2:1rem;
   --s3:1.5rem;
@@ -57,6 +61,7 @@ li+li{margin-top:.55rem}
 .content{padding:var(--s6) clamp(1.5rem,5vw,6rem)}
 .eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
 .display{font-family:var(--font-display-xxl);font-size:var(--display-xl);line-height:.78;letter-spacing:-.075em;margin:var(--s3) 0 var(--s5);max-width:11ch}
+.display-italic{font-family:var(--font-display-xxl-italic);font-style:italic}
 .hero-lead{font-size:var(--lead);line-height:1.25;color:var(--ink);max-width:52ch}
 .section{padding:var(--s7) 0;border-top:1px solid var(--line)}
 h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-.06em;line-height:.9;margin:0 0 var(--s3)}
@@ -92,7 +97,9 @@ h3{font-size:var(--h3)}
 .type-specimen strong{font-size:clamp(3rem,9vw,9rem);font-family:var(--specimen-font,var(--font-display));font-weight:400;letter-spacing:-.075em;line-height:.78;word-break:break-word;color:var(--ink)}
 .type-specimen .meta{display:flex;justify-content:space-between;gap:var(--s2);border-top:1px solid var(--line);padding-top:var(--s2);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .font-20{--specimen-font:'Redaction 20'}
+.font-20-italic{--specimen-font:'Redaction 20 Italic'}
 .font-35{--specimen-font:'Redaction 35'}
+.font-35-italic{--specimen-font:'Redaction 35 Italic'}
 .font-50{--specimen-font:'Redaction 50'}
 .font-70{--specimen-font:'Redaction 70'}
 .font-100{--specimen-font:'Redaction 100'}
@@ -114,6 +121,8 @@ h3{font-size:var(--h3)}
 .example-panel.dark{background:#17130f;color:#f6efe4;border-color:rgba(246,239,228,.2)}
 .example-panel.dark p,.example-panel.dark .eyebrow,.example-panel.dark .small{color:rgba(246,239,228,.68)}
 .example-title{font-family:var(--font-display);font-size:clamp(2.7rem,6vw,6.5rem);line-height:.82;letter-spacing:-.07em;margin:0;max-width:10ch}
+.editorial-italic,.type-accent{font-family:var(--font-display-italic);font-style:italic;font-weight:400;letter-spacing:-.055em;color:var(--ink)}
+.type-accent{font-size:clamp(2.4rem,5vw,5.5rem);line-height:.86;max-width:12ch}
 .example-lead{font-size:var(--lead);line-height:1.18;color:var(--ink);max-width:34ch;margin:0}
 .example-panel.dark .example-lead{color:#f6efe4}
 .microcopy{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--muted)}
