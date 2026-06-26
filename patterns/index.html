@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pattern Overview — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="../systems/typography.html">Typography</a>
+        <a href="../systems/motion.html">Motion</a>
+        <a class="active" href="index.html">Patterns</a>
+        <a href="progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">Volume 3 / Pattern Library</p>
+      <h1 class="display">Reusable editorial patterns.</h1>
+      <p class="hero-lead">A practical overview of page modules that preserve hierarchy, rhythm and recognition across the Design OS. Each pattern defines purpose, HTML structure, type, spacing, usage limits and a real visual sample.</p>
+
+      <section class="section grid" id="hero-statement">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 01</span>
+          <h2>Hero statement</h2>
+          <p>Scopo: declare the page thesis in one memorable statement before any supporting detail.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>p.eyebrow</code> + <code>h1.display</code> + <code>p.hero-lead</code></span><p>Keep it inside <code>main.content</code>; use one real <code>h1</code> only.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Maximum contrast.</span><p>Redaction display for the statement, Geist lead for fast comprehension.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Let it breathe.</span><p>Use the default display margin, then separate the next module with <code>.section</code>.</p></div>
+          <div class="do-dont">
+            <div class="decision-card good"><span class="rule-number">Use when</span><h3>A page needs a thesis.</h3><p>Best for home, system chapters and major reference pages.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>The task is transactional.</h3><p>Do not slow down forms, utility pages or repeated index items.</p></div>
+          </div>
+          <div class="example-panel dark"><span class="microcopy">Example</span><h3 class="example-title">Motion must reveal information.</h3><p class="example-lead">A large editorial claim followed by one concise explanatory line.</p></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="section-intro">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 02</span>
+          <h2>Section intro</h2>
+          <p>Scopo: introduce a new decision layer without competing with the page hero.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>section.section.grid</code></span><p>Put badge and <code>h2</code> in a <code>.span-5</code>; explanatory rules or content in <code>.span-7</code>.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Editorial but secondary.</span><p>Use <code>h2</code> in Redaction and body copy in Geist with muted color.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">One section equals one decision.</span><p>Use <code>.section</code> top padding and border; avoid stacking unrelated intros inside the same section.</p></div>
+          <div class="do-dont">
+            <div class="decision-card good"><span class="rule-number">Use when</span><h3>The user enters a new topic.</h3><p>Ideal for rule sets, specimens, examples and methods.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>The content is only a label.</h3><p>Use an eyebrow or card title instead.</p></div>
+          </div>
+          <div class="example-panel"><span class="badge">Rule Set</span><h3 class="example-title">Every text style has a job.</h3><p>Use semantic hierarchy first, then visual scale.</p></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="rule-block">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 03</span>
+          <h2>Rule block</h2>
+          <p>Scopo: turn a principle into an inspectable rule with a label, title and rationale.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>div.rule</code></span><p>Use <code>.rule-number</code>, <code>.rule-title</code> and a short paragraph.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Dense, not loud.</span><p>Number labels are uppercase microcopy; titles use strong Geist for clear scanning.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Border creates separation.</span><p>Let the built-in top border and padding separate rules; group multiple rules with <code>.stack</code>.</p></div>
+          <div class="do-dont">
+            <div class="decision-card good"><span class="rule-number">Use when</span><h3>A decision must be repeatable.</h3><p>Good for laws, states, accessibility limits and implementation notes.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>You need storytelling.</h3><p>Do not fragment narrative paragraphs into fake rules.</p></div>
+          </div>
+          <div class="example-panel"><div class="rule"><span class="rule-number">M-002</span><span class="rule-title">Readability must arrive early.</span><p>Scroll reveals complete before the element reaches the central focal zone.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="do-dont-pair">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 04</span>
+          <h2>Do/Don’t pair</h2>
+          <p>Scopo: make a usage decision explicit by contrasting the recommended and risky choice.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>div.do-dont</code> with two <code>.decision-card</code>s</span><p>Apply <code>.good</code> and <code>.bad</code> to signal direction without relying only on wording.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Symmetric hierarchy.</span><p>Both cards should use the same heading level and similar copy length.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Two equal columns.</span><p>Keep the pair adjacent; on small screens the existing responsive rules stack them.</p></div>
+          <div class="do-dont">
+            <div class="decision-card good"><span class="rule-number">Use when</span><h3>Behavior has a clear boundary.</h3><p>Useful for motion, typography, contrast and interaction rules.</p></div>
+            <div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>The answer is contextual.</h3><p>If both choices may be valid, use a rule block instead.</p></div>
+          </div>
+          <div class="example-panel"><div class="do-dont"><div class="decision-card good"><span class="rule-number">Do</span><h3>Reveal meaning.</h3><p>Motion clarifies sequence.</p></div><div class="decision-card bad"><span class="rule-number">Don’t</span><h3>Hide controls.</h3><p>Navigation must read instantly.</p></div></div></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="card-grid">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 05</span>
+          <h2>Card grid</h2>
+          <p>Scopo: present sibling options, volumes or modules with equal priority.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>section.section.grid</code> + <code>.card</code></span><p>Use <code>.span-4</code> for three cards or <code>.span-3</code> for four cards.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Small label, clear module title.</span><p>Use eyebrow metadata, <code>h3</code> title and one concise paragraph.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Equal internal padding.</span><p>Let <code>.card</code> provide the internal rhythm; avoid adding custom margins between card children.</p></div>
+          <div class="do-dont"><div class="decision-card good"><span class="rule-number">Use when</span><h3>Items are peers.</h3><p>Good for volumes, pattern links and feature groups.</p></div><div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>Items need a sequence.</h3><p>Use rule blocks or process steps for ordered decisions.</p></div></div>
+          <div class="example-panel"><div class="grid"><div class="span-4 card"><span class="eyebrow">Volume 0</span><h3>Mindset</h3><p>Decision process.</p></div><div class="span-4 card"><span class="eyebrow">Volume 1</span><h3>Systems</h3><p>Reusable rules.</p></div><div class="span-4 card"><span class="eyebrow">Volume 2</span><h3>Reference</h3><p>Applied modules.</p></div></div></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="reference-module">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 06</span>
+          <h2>Reference module</h2>
+          <p>Scopo: show a finished page fragment so rules become tangible rather than abstract.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>.contrast-sample</code> or <code>.example-panel</code></span><p>Pair explanatory copy with a strong visual sample.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Copy explains; art proves.</span><p>Use a readable body text block next to a large Redaction specimen or applied composition.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Panel owns its space.</span><p>Use a full-width bordered module; do not crowd it inside a dense text stack.</p></div>
+          <div class="do-dont"><div class="decision-card good"><span class="rule-number">Use when</span><h3>You need evidence.</h3><p>Best after rules, before asking the user to adopt the pattern.</p></div><div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>The example is generic.</h3><p>A reference module must show a real system behavior.</p></div></div>
+          <div class="contrast-sample"><div class="contrast-copy"><span class="badge">Applied System</span><h3>Hierarchy works before color.</h3><p>The section remains understandable through type size, rhythm and contrast.</p></div><div class="contrast-art"><strong>OS</strong></div></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="cta-closing-block">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 07</span>
+          <h2>CTA closing block</h2>
+          <p>Scopo: end a page with one decisive next step instead of a weak footer drift.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>section.section</code> + <code>.example-panel.dark</code></span><p>Use a badge, short heading, one paragraph and one text link or button-like anchor.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">One action hierarchy.</span><p>The CTA title should dominate; supporting copy stays brief and readable.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Closing weight.</span><p>Place it near the end of content with section padding above; avoid multiple competing CTAs.</p></div>
+          <div class="do-dont"><div class="decision-card good"><span class="rule-number">Use when</span><h3>There is a logical next step.</h3><p>Send users to a pattern, reference implementation or lab test.</p></div><div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>No action is required.</h3><p>Do not manufacture urgency on documentation pages.</p></div></div>
+          <div class="example-panel dark"><span class="microcopy">Next</span><h3 class="example-title">Test the motion pattern.</h3><p class="example-lead">Move from the overview into the Progressive Recognition specimen.</p><a class="badge" href="progressive-recognition.html">Open pattern</a></div>
+        </div>
+      </section>
+
+      <section class="section grid" id="progressive-recognition">
+        <div class="span-5 stack-tight">
+          <span class="badge">Pattern 08</span>
+          <h2>Progressive Recognition</h2>
+          <p>Scopo: transform content from abstraction to readable meaning while preserving timing and comprehension.</p>
+          <div class="rule"><span class="rule-number">HTML</span><span class="rule-title"><code>.recognition-word</code> + <code>data-progressive-recognition</code></span><p>Use it inside a demo, hero or transition panel; keep the final word short.</p></div>
+          <div class="rule"><span class="rule-number">Type</span><span class="rule-title">Redaction state sequence.</span><p>Move from Redaction 100 through intermediate states to Redaction 35 before the focal zone.</p></div>
+        </div>
+        <div class="span-7 stack">
+          <div class="rule"><span class="rule-number">Spacing</span><span class="rule-title">Large focal field.</span><p>Use enough vertical space for the transformation; the existing <code>.demo</code> min-height gives the word room.</p></div>
+          <div class="do-dont"><div class="decision-card good"><span class="rule-number">Use when</span><h3>Expression can precede reading.</h3><p>Hero words, section transitions and large editorial statements.</p></div><div class="decision-card bad"><span class="rule-number">Avoid when</span><h3>Text is functional.</h3><p>Never use it for navigation, buttons, labels or body copy.</p></div></div>
+          <div class="example-panel"><div class="demo"><div class="recognition-word" data-progressive-recognition>System</div></div></div>
+        </div>
+      </section>
+
+      <footer class="footer">Pattern overview / v0.3</footer>
+    </main>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
