@@ -172,3 +172,41 @@ h3{font-size:var(--h3)}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
+
+a:focus-visible,button:focus-visible,.button:focus-visible{outline:3px solid var(--ink);outline-offset:4px;text-decoration:none}
+button{font:inherit}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:1px solid var(--ink);padding:.78rem 1rem;min-height:44px;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800;line-height:1;background:transparent;color:var(--ink);cursor:pointer;transition:transform 160ms cubic-bezier(.16,1,.3,1),background-color 160ms ease,color 160ms ease,border-color 160ms ease,box-shadow 160ms ease}
+.button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+.button:hover,.button.is-hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(20,17,15,.12)}
+.button.primary:hover,.button.primary.is-hover{background:#2a2520}
+.button.secondary:hover,.button.secondary.is-hover{border-color:var(--ink);background:rgba(20,17,15,.05)}
+.button:active,.button.is-active{transform:translateY(1px);box-shadow:none}
+.button.disabled,.button:disabled{border-color:rgba(20,17,15,.12);background:rgba(20,17,15,.06);color:rgba(20,17,15,.35);cursor:not-allowed;box-shadow:none;transform:none}
+.button.is-focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+
+.state-demo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s2);margin-top:var(--s3)}
+.state-frame{min-height:170px;border:1px solid var(--line);background:var(--paper);padding:var(--s3);display:grid;align-content:space-between;gap:var(--s2);position:relative;transition:transform 160ms cubic-bezier(.16,1,.3,1),border-color 160ms ease,box-shadow 160ms ease,background-color 160ms ease}
+.state-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--muted)}
+.state-nav-link{justify-self:start;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.state-nav-link:hover,.state-nav-link.is-hover,.state-nav-link.is-active{color:var(--ink);text-decoration:underline;text-underline-offset:.28em}
+.state-nav-link.is-active{transform:translateY(1px)}
+.state-nav-link.is-focus-visible{color:var(--ink);outline:3px solid var(--ink);outline-offset:4px}
+.state-nav-link.is-disabled,.state-nav-link[aria-disabled="true"]{color:rgba(20,17,15,.32);text-decoration:none;cursor:not-allowed;pointer-events:none}
+.card-link{color:inherit;min-height:220px}
+.card-link strong{font-family:var(--font-display);font-size:2.1rem;line-height:.9;letter-spacing:-.055em;color:var(--ink)}
+.card-link p{margin:0;font-size:.95rem}
+.card-link:hover,.card-link.is-hover{border-color:var(--ink);box-shadow:0 14px 34px rgba(20,17,15,.12);transform:translateY(-2px)}
+.card-link:hover strong,.card-link.is-hover strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.14em}
+.card-link:active,.card-link.is-active{transform:translateY(1px);box-shadow:none;background:#efe8dc}
+.card-link:focus-visible,.card-link.is-focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-color:var(--ink)}
+.card-link.is-disabled{opacity:.48;cursor:not-allowed;box-shadow:none;transform:none}
+.badge.interactive{background:transparent;cursor:pointer;transition:background-color 160ms ease,color 160ms ease,border-color 160ms ease,transform 160ms cubic-bezier(.16,1,.3,1)}
+.badge.interactive:hover,.badge.interactive.is-hover{border-color:var(--ink);color:var(--ink);background:rgba(20,17,15,.05)}
+.badge.interactive:active,.badge.interactive.is-active{transform:translateY(1px);background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.badge.interactive.is-focus-visible{outline:3px solid var(--ink);outline-offset:4px;color:var(--ink)}
+.badge.interactive:disabled,.badge.interactive.is-disabled{border-color:rgba(20,17,15,.12);color:rgba(20,17,15,.35);background:rgba(20,17,15,.04);cursor:not-allowed;transform:none}
+
+@media(max-width:900px){
+  .state-demo{grid-template-columns:1fr 1fr}
+}
