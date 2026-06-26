@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QA Checklist — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="../systems/typography.html">Typography</a>
+        <a href="../systems/motion.html">Motion</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="index.html">Reference</a>
+        <a class="active" href="checklist.html">QA Checklist</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="section checklist-hero">
+        <p class="eyebrow">Reference QA</p>
+        <h1>Visual quality checklist.</h1>
+        <p class="hero-lead">A compact review tool for checking typography, spacing, motion, components and accessibility before a design moves from reference to production.</p>
+        <div class="status-legend" aria-label="Checklist status legend">
+          <span class="qa-status pass">Pass</span>
+          <span class="qa-status review">Review</span>
+          <span class="qa-status fail">Fail</span>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="typography-checks">
+        <div class="decision-card">
+          <span class="rule-number">01 Typography</span>
+          <h2 id="typography-checks">Type works without decoration.</h2>
+          <p>Use these checks to confirm the page is readable before relying on color, motion or texture.</p>
+        </div>
+        <div class="token-table" role="table" aria-label="Typography checklist">
+          <div class="qa-row" role="row"><strong>Single H1</strong><span>Only one primary page heading is present.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Hierarchy</strong><span>The reading order remains clear without color.</span><span class="qa-status review">Review</span></div>
+          <div class="qa-row" role="row"><strong>Body copy</strong><span>Measure, size and line-height support sustained reading.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Redaction 100/70</strong><span>Used only as transient states, not as stable body content.</span><span class="qa-status fail">Fail</span></div>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="spacing-checks">
+        <div class="decision-card">
+          <span class="rule-number">02 Spacing</span>
+          <h2 id="spacing-checks">Space creates rhythm.</h2>
+          <p>Check that layout density supports comprehension instead of forcing attention through compression.</p>
+        </div>
+        <div class="token-table" role="table" aria-label="Spacing checklist">
+          <div class="qa-row" role="row"><strong>Sections</strong><span>Major sections have enough breathing room.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Grid</strong><span>Columns, spans and gutters remain consistent.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Cards</strong><span>Card content is not overly dense.</span><span class="qa-status review">Review</span></div>
+          <div class="qa-row" role="row"><strong>Width</strong><span>Text and modules do not stretch too wide.</span><span class="qa-status pass">Pass</span></div>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="motion-checks">
+        <div class="decision-card">
+          <span class="rule-number">03 Motion</span>
+          <h2 id="motion-checks">Movement has a job.</h2>
+          <p>Motion should clarify recognition and state change, never hide essential content or delay action.</p>
+        </div>
+        <div class="token-table" role="table" aria-label="Motion checklist">
+          <div class="qa-row" role="row"><strong>Purpose</strong><span>Every movement has a clear communication goal.</span><span class="qa-status review">Review</span></div>
+          <div class="qa-row" role="row"><strong>No animation</strong><span>Content remains readable when animation is disabled.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Reduced motion</strong><span><code>prefers-reduced-motion</code> is respected.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Essential UI</strong><span>No delay blocks navigation, input or primary actions.</span><span class="qa-status fail">Fail</span></div>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="component-checks">
+        <div class="decision-card">
+          <span class="rule-number">04 Components</span>
+          <h2 id="component-checks">Patterns behave consistently.</h2>
+          <p>Components should repeat decisions, expose interaction states and make calls to action unmistakable.</p>
+        </div>
+        <div class="token-table" role="table" aria-label="Component checklist">
+          <div class="qa-row" role="row"><strong>Consistency</strong><span>Repeated components follow the same visual rules.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>States</strong><span>Hover and focus states are designed and visible.</span><span class="qa-status review">Review</span></div>
+          <div class="qa-row" role="row"><strong>CTA</strong><span>Primary actions are recognizable as actions.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Badges</strong><span>Badges and labels support content, not replace it.</span><span class="qa-status review">Review</span></div>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="accessibility-checks">
+        <div class="decision-card">
+          <span class="rule-number">05 Accessibility</span>
+          <h2 id="accessibility-checks">Access is part of quality.</h2>
+          <p>Confirm that the system remains legible, navigable and understandable across user settings and fallbacks.</p>
+        </div>
+        <div class="token-table" role="table" aria-label="Accessibility checklist">
+          <div class="qa-row" role="row"><strong>Contrast</strong><span>Foreground and background contrast is sufficient.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Links</strong><span>Links are distinguishable from surrounding text.</span><span class="qa-status review">Review</span></div>
+          <div class="qa-row" role="row"><strong>Navigation</strong><span>Current location and navigation choices are clear.</span><span class="qa-status pass">Pass</span></div>
+          <div class="qa-row" role="row"><strong>Fallback fonts</strong><span>Text remains readable when custom fonts fail.</span><span class="qa-status pass">Pass</span></div>
+        </div>
+      </section>
+
+      <footer class="footer">QA Checklist / v0.1</footer>
+    </main>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
