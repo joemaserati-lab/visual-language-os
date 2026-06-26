@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tokens — Design OS</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Design<br>OS</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../mindset.html">Mindset</a>
+        <a href="typography.html">Typography</a>
+        <a class="active" href="tokens.html">Tokens</a>
+        <a href="motion.html">Motion</a>
+        <a href="../patterns/progressive-recognition.html">Progressive Recognition</a>
+        <a href="../reference/index.html">Reference</a>
+        <a href="../laboratory/index.html">Laboratory</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <p class="eyebrow">System / Tokens</p>
+      <h1 class="display">Tokens make decisions portable.</h1>
+      <p class="hero-lead">Design OS tokens define the stable visual vocabulary for color, rhythm, scale and font roles. Use them as semantic decisions, not as arbitrary values.</p>
+
+      <section class="section">
+        <span class="badge">Color tokens</span>
+        <h2>Color supports hierarchy.</h2>
+        <div class="token-table">
+          <div class="token-row color-token"><strong>--bg</strong><span>#f4f1ea</span><span>Global page background.</span><div class="color-swatch" style="--swatch:var(--bg)" aria-label="Background color sample"></div></div>
+          <div class="token-row color-token"><strong>--ink</strong><span>#14110f</span><span>Primary text and high-contrast marks.</span><div class="color-swatch" style="--swatch:var(--ink)" aria-label="Ink color sample"></div></div>
+          <div class="token-row color-token"><strong>--muted</strong><span>#6f675f</span><span>Secondary copy, metadata and quiet labels.</span><div class="color-swatch" style="--swatch:var(--muted)" aria-label="Muted color sample"></div></div>
+          <div class="token-row color-token"><strong>--line</strong><span>rgba(20,17,15,.14)</span><span>Rules, dividers and low-noise borders.</span><div class="color-swatch" style="--swatch:var(--line)" aria-label="Line color sample"></div></div>
+          <div class="token-row color-token"><strong>--card</strong><span>#fffaf1</span><span>Raised content cards and modular surfaces.</span><div class="color-swatch" style="--swatch:var(--card)" aria-label="Card color sample"></div></div>
+          <div class="token-row color-token"><strong>--paper</strong><span>#fbf6ec</span><span>Documentation tables and quiet panels.</span><div class="color-swatch" style="--swatch:var(--paper)" aria-label="Paper color sample"></div></div>
+          <div class="token-row color-token"><strong>--success</strong><span>#255c38</span><span>Positive decisions and recommended usage.</span><div class="color-swatch" style="--swatch:var(--success)" aria-label="Success color sample"></div></div>
+          <div class="token-row color-token"><strong>--risk</strong><span>#8a2f22</span><span>Warnings, anti-patterns and risky choices.</span><div class="color-swatch" style="--swatch:var(--risk)" aria-label="Risk color sample"></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Spacing tokens</span>
+        <h2>Spacing controls rhythm.</h2>
+        <div class="token-table">
+          <div class="token-row"><strong>--s1</strong><span>.5rem</span><span>Micro gaps inside compact UI.</span><div class="spacing-token-demo" style="--space:var(--s1)"></div></div>
+          <div class="token-row"><strong>--s2</strong><span>1rem</span><span>Default tight stack and inline module rhythm.</span><div class="spacing-token-demo" style="--space:var(--s2)"></div></div>
+          <div class="token-row"><strong>--s3</strong><span>1.5rem</span><span>Grid gaps and regular content grouping.</span><div class="spacing-token-demo" style="--space:var(--s3)"></div></div>
+          <div class="token-row"><strong>--s4</strong><span>2rem</span><span>Card padding and sidebar inset.</span><div class="spacing-token-demo" style="--space:var(--s4)"></div></div>
+          <div class="token-row"><strong>--s5</strong><span>3rem</span><span>Hero-to-content separation.</span><div class="spacing-token-demo" style="--space:var(--s5)"></div></div>
+          <div class="token-row"><strong>--s6</strong><span>4rem</span><span>Page padding and footer rhythm.</span><div class="spacing-token-demo" style="--space:var(--s6)"></div></div>
+          <div class="token-row"><strong>--s7</strong><span>6rem</span><span>Major section separation.</span><div class="spacing-token-demo" style="--space:var(--s7)"></div></div>
+          <div class="token-row"><strong>--s8</strong><span>8rem</span><span>Large editorial pause.</span><div class="spacing-token-demo" style="--space:var(--s8)"></div></div>
+          <div class="token-row"><strong>--s9</strong><span>12rem</span><span>Maximum campaign-scale breathing room.</span><div class="spacing-token-demo" style="--space:var(--s9)"></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Typography tokens</span>
+        <h2>Scale assigns responsibility.</h2>
+        <div class="token-table">
+          <div class="token-row"><strong>--display-xl</strong><span>clamp(5rem,13vw,14rem)</span><span>Largest hero statement.</span><div class="type-token-demo" style="font-size:var(--display-xl)">Aa</div></div>
+          <div class="token-row"><strong>--display</strong><span>clamp(4rem,9vw,9rem)</span><span>Primary display hook.</span><div class="type-token-demo" style="font-size:var(--display)">Aa</div></div>
+          <div class="token-row"><strong>--h1</strong><span>clamp(3.25rem,7vw,7rem)</span><span>Page argument.</span><div class="type-token-demo" style="font-size:var(--h1)">Aa</div></div>
+          <div class="token-row"><strong>--h2</strong><span>clamp(2.4rem,4.5vw,4.75rem)</span><span>Section decision.</span><div class="type-token-demo" style="font-size:var(--h2)">Aa</div></div>
+          <div class="token-row"><strong>--h3</strong><span>clamp(1.7rem,2.6vw,2.6rem)</span><span>Module title.</span><div class="type-token-demo" style="font-size:var(--h3)">Aa</div></div>
+          <div class="token-row"><strong>--lead</strong><span>clamp(1.2rem,2vw,1.75rem)</span><span>Thesis paragraph.</span><div class="type-token-demo text-font" style="font-size:var(--lead)">Aa</div></div>
+          <div class="token-row"><strong>--body</strong><span>clamp(1rem,1.1vw,1.15rem)</span><span>Default reading layer.</span><div class="type-token-demo text-font" style="font-size:var(--body)">Aa</div></div>
+          <div class="token-row"><strong>--small</strong><span>.875rem</span><span>Metadata and captions.</span><div class="type-token-demo text-font" style="font-size:var(--small)">Aa</div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <span class="badge">Font tokens</span>
+        <h2>Fonts separate identity from reading.</h2>
+        <div class="token-table">
+          <div class="token-row"><strong>--font-text</strong><span>'Geist', system-ui, sans-serif</span><span>Readable UI, paragraphs and metadata.</span><div class="type-token-demo text-font">Geist</div></div>
+          <div class="token-row"><strong>--font-display</strong><span>'Redaction 35', 'Geist', system-ui, sans-serif</span><span>Editorial display and expressive hierarchy.</span><div class="type-token-demo">Redaction</div></div>
+        </div>
+      </section>
+
+      <footer class="footer">Tokens / v0.2</footer>
+    </main>
+  </div>
+</body>
+</html>
