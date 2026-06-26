@@ -143,6 +143,8 @@ The system uses Redaction for identity and Geist for clarity.
 
 ### Redaction Rules
 
+Redaction is the display and editorial layer. It is not the reading layer.
+
 Use Redaction 20 for XXL titles when Redaction 35 becomes too pixelated at hero scale.
 
 Use Redaction 35 when the text must be both expressive and readable at normal heading scale.
@@ -151,7 +153,7 @@ Use Redaction Italic as an intentional accent voice, not as automatic emphasis. 
 
 Use Redaction 20 Italic for oversized hero accents. Use Redaction 35 Italic for short editorial insertions, quoted fragments and expressive phrases.
 
-Do not use Redaction Italic for navigation, buttons, labels, instructions, body copy or accessibility-critical interface text.
+Do not use Redaction or Redaction Italic for navigation, buttons, labels, instructions, body copy or accessibility-critical interface text.
 
 Use Redaction 50, 70 and 100 as transitional or experimental states only. They are not final reading states.
 
@@ -165,9 +167,13 @@ The readable state must arrive before the element reaches the user's main focal 
 
 ### Geist Rules
 
-Use Geist for:
+Geist is the default reading and interface layer.
+
+Always use Geist for:
 
 - Body copy
+- Paragraphs
+- Lead copy
 - Navigation
 - Buttons
 - Labels
@@ -175,7 +181,7 @@ Use Geist for:
 - Metadata
 - Interface instructions
 
-Geist should carry clarity. Do not use expressive font states for functional text.
+Geist should carry clarity. Do not use expressive Redaction states for functional text, continuous reading or any content that asks the user to decide, navigate or act.
 
 ### Type Hierarchy
 
@@ -539,9 +545,10 @@ Use this before publishing a new page or major section.
 
 ### Typography
 
-- Redaction 20 is used for XXL display titles
+- Geist is used for all bodycopy, paragraphs, lead copy and interface text
+- Redaction 20 is used for XXL display titles only
 - Redaction 20 Italic is used only for oversized editorial accents
-- Redaction 35 is used for readable display below XXL scale
+- Redaction 35 is used for display headings below XXL scale
 - Redaction 35 Italic is used only for short editorial accent moments
 - Redaction 50, 70 and 100 are only used as transitional or experimental states
 - Geist is used for body, labels and UI text
@@ -587,8 +594,8 @@ Use this before publishing a new page or major section.
 - Make hierarchy visible before adding color
 - Use Redaction 20 for oversized hero identity
 - Use Redaction Italic as a controlled editorial second voice
-- Use Redaction 35 for readable identity below XXL scale
-- Use Geist for information and interface text
+- Use Redaction 35 for display identity below XXL scale
+- Use Geist for information, reading and interface text
 - Use motion to reveal sequence
 - Document the limits of each pattern
 - Keep components specific and purposeful
@@ -597,6 +604,7 @@ Use this before publishing a new page or major section.
 ### Don't
 
 - Use Redaction 100 as body copy
+- Use any Redaction face for paragraphs or bodycopy
 - Use Redaction Italic as default emphasis for functional text
 - Make navigation wait for animation
 - Add motion because the static layout feels weak

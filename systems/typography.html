@@ -25,26 +25,27 @@
     <main class="content">
       <p class="eyebrow">System / Typography</p>
       <h1 class="display">Typography is the first interface.</h1>
-      <p class="hero-lead">Redaction 20 gives XXL titles a cleaner display state. Redaction 35 gives readable identity. Redaction Italic adds editorial tension. Geist gives clarity.</p>
+      <p class="hero-lead">Redaction is the display and editorial layer. Geist is the reading and interface layer. Body copy, paragraphs, navigation, labels and instructions always use Geist.</p>
 
       <section class="section grid">
         <div class="span-5">
           <span class="badge">Rule Set</span>
-          <h2>Every text style has a job.</h2>
-          <p>Use semantic HTML for structure, then apply visual scale through tokens. The page should still make sense if all colors are removed.</p>
+          <h2>Every text style has a strict job.</h2>
+          <p>Use semantic HTML for structure, then apply font roles with discipline. Redaction creates identity. Geist carries information.</p>
         </div>
         <div class="span-7 stack">
           <div class="rule"><span class="rule-number">H1</span><span class="rule-title">One page statement.</span><p>Use one real <code>h1</code> per page. It names the page argument, not just the page category.</p></div>
           <div class="rule"><span class="rule-number">H2</span><span class="rule-title">Section decision.</span><p>Use <code>h2</code> to mark a new decision layer: system rule, example group, specimen, method or validation block.</p></div>
           <div class="rule"><span class="rule-number">H3</span><span class="rule-title">Module title.</span><p>Use <code>h3</code> inside cards, examples and small repeated modules. Do not use it as a smaller H2.</p></div>
-          <div class="rule"><span class="rule-number">P</span><span class="rule-title">Explanation layer.</span><p>Paragraphs use Geist because they must be read quickly. Redaction is reserved for high-impact display and transformation states.</p></div>
+          <div class="rule"><span class="rule-number">P</span><span class="rule-title">Reading layer.</span><p>Paragraphs, body copy, labels, navigation and instructions use Geist. Redaction must not be used for continuous reading.</p></div>
         </div>
       </section>
 
       <section class="section">
-        <span class="badge">Font Specimens</span>
-        <h2>Redaction is not one voice.</h2>
+        <span class="badge">Font Roles</span>
+        <h2>Redaction displays. Geist explains.</h2>
         <div class="grid">
+          <div class="type-specimen font-geist span-6"><strong>Signal</strong><div class="meta"><span>Geist</span><span>Reading + UI</span></div></div>
           <div class="type-specimen font-20 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 20</span><span>XXL display</span></div></div>
           <div class="type-specimen font-20-italic span-6"><strong>Signal</strong><div class="meta"><span>Redaction 20 Italic</span><span>XXL accent</span></div></div>
           <div class="type-specimen font-35 span-6"><strong>Signal</strong><div class="meta"><span>Redaction 35</span><span>Readable display</span></div></div>
@@ -64,7 +65,22 @@
         <div class="span-7 stack">
           <p class="type-accent">A shift in posture can become a second voice.</p>
           <div class="rule"><span class="rule-number">I-001</span><span class="rule-title">Italic is an accent, not a default style.</span><p>Use it for short editorial insertions, quoted fragments, tension words and expressive page moments.</p></div>
-          <div class="rule"><span class="rule-number">I-002</span><span class="rule-title">Functional text stays upright.</span><p>Navigation, buttons, labels, instructions and body copy must remain immediately readable in Geist or upright Redaction.</p></div>
+          <div class="rule"><span class="rule-number">I-002</span><span class="rule-title">Functional text stays Geist.</span><p>Navigation, buttons, labels, instructions and body copy must remain immediately readable in Geist.</p></div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="span-5">
+          <span class="badge">Reading Layer</span>
+          <h2>Geist carries the body.</h2>
+          <p>Any text that asks the user to read, decide, navigate or act belongs to Geist. Redaction should never be the default bodycopy voice.</p>
+        </div>
+        <div class="span-7 token-table">
+          <div class="token-row"><strong>Paragraphs</strong><span>Geist</span><span>Explanation, evidence, bodycopy</span></div>
+          <div class="token-row"><strong>Lead copy</strong><span>Geist</span><span>Page context and section introductions</span></div>
+          <div class="token-row"><strong>Navigation</strong><span>Geist</span><span>Stable interface wayfinding</span></div>
+          <div class="token-row"><strong>Labels</strong><span>Geist</span><span>Badges, metadata, captions, UI text</span></div>
+          <div class="token-row"><strong>Actions</strong><span>Geist</span><span>Buttons, links and instructions</span></div>
         </div>
       </section>
 
@@ -77,8 +93,8 @@
           <div class="scale-row"><span class="label">Italic</span><div class="sample editorial-italic">Editorial accent voice</div><small>Use for short expressive interruptions only.</small></div>
           <div class="scale-row"><span class="label">H2</span><div class="sample scale-h2">Section decision</div><small>Starts a new conceptual block.</small></div>
           <div class="scale-row"><span class="label">H3</span><div class="sample scale-h3">Module title</div><small>Cards, examples, grouped rules.</small></div>
-          <div class="scale-row"><span class="label">Lead</span><div class="sample scale-lead">A lead paragraph states the thesis before details arrive.</div><small>Use once near a hero or section opening.</small></div>
-          <div class="scale-row"><span class="label">P</span><div class="sample scale-body">Body copy explains the decision, evidence or instruction in Geist with calm rhythm and enough measure to support reading.</div><small>Default explanation layer.</small></div>
+          <div class="scale-row"><span class="label">Lead</span><div class="sample scale-lead">A lead paragraph states the thesis before details arrive.</div><small>Always Geist. Use once near a hero or section opening.</small></div>
+          <div class="scale-row"><span class="label">P</span><div class="sample scale-body">Body copy explains the decision, evidence or instruction in Geist with calm rhythm and enough measure to support reading.</div><small>Always Geist. Default explanation layer.</small></div>
           <div class="scale-row"><span class="label">Small</span><div class="sample scale-small">Metadata, captions, system labels and interface notes.</div><small>Never carry the main message.</small></div>
         </div>
       </section>
@@ -102,8 +118,10 @@
         <div class="do-dont">
           <div class="decision-card good"><span class="rule-number">Do</span><h3>Use Redaction 20 for XXL display.</h3><p>Hero-scale titles need a cleaner Redaction state so the identity stays expressive without becoming overly pixelated.</p></div>
           <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use Redaction 100 for body copy.</h3><p>Abstract states belong in motion, texture or transition moments. They are not final reading states.</p></div>
+          <div class="decision-card good"><span class="rule-number">Do</span><h3>Use Geist for every reading layer.</h3><p>Paragraphs, bodycopy, lead copy, navigation, labels, captions, buttons and instructions stay in Geist.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use Redaction for paragraphs.</h3><p>Redaction is too expressive for continuous reading and should not carry bodycopy or functional interface text.</p></div>
           <div class="decision-card good"><span class="rule-number">Do</span><h3>Use Redaction Italic as a second voice.</h3><p>Short italic accents can create contrast, attitude and editorial rhythm inside an otherwise disciplined page.</p></div>
-          <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use italic for interface instructions.</h3><p>Functional text must stay stable, upright and instantly readable.</p></div>
+          <div class="decision-card bad"><span class="rule-number">Don't</span><h3>Use italic for interface instructions.</h3><p>Functional text must stay stable, upright and instantly readable in Geist.</p></div>
         </div>
       </section>
 

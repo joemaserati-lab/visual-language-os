@@ -46,7 +46,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:var(--body);line-height:1.58}
 a{color:inherit;text-decoration:none}
-p{max-width:68ch;color:var(--muted)}
+p{max-width:68ch;color:var(--muted);font-family:var(--font-text)}
 small,.small{font-size:var(--small);color:var(--muted)}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:rgba(20,17,15,.07);padding:.15em .38em;border-radius:.3em}
 ul,ol{color:var(--muted);padding-left:1.15rem;max-width:68ch}
@@ -62,7 +62,7 @@ li+li{margin-top:.55rem}
 .eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
 .display{font-family:var(--font-display-xxl);font-size:var(--display-xl);line-height:.78;letter-spacing:-.075em;margin:var(--s3) 0 var(--s5);max-width:11ch}
 .display-italic{font-family:var(--font-display-xxl-italic);font-style:italic}
-.hero-lead{font-size:var(--lead);line-height:1.25;color:var(--ink);max-width:52ch}
+.hero-lead{font-family:var(--font-text);font-size:var(--lead);line-height:1.25;color:var(--ink);max-width:52ch}
 .section{padding:var(--s7) 0;border-top:1px solid var(--line)}
 h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-.06em;line-height:.9;margin:0 0 var(--s3)}
 h1{font-size:var(--h1)}
@@ -123,7 +123,7 @@ h3{font-size:var(--h3)}
 .example-title{font-family:var(--font-display);font-size:clamp(2.7rem,6vw,6.5rem);line-height:.82;letter-spacing:-.07em;margin:0;max-width:10ch}
 .editorial-italic,.type-accent{font-family:var(--font-display-italic);font-style:italic;font-weight:400;letter-spacing:-.055em;color:var(--ink)}
 .type-accent{font-size:clamp(2.4rem,5vw,5.5rem);line-height:.86;max-width:12ch}
-.example-lead{font-size:var(--lead);line-height:1.18;color:var(--ink);max-width:34ch;margin:0}
+.example-lead{font-family:var(--font-text);font-size:var(--lead);line-height:1.18;color:var(--ink);max-width:34ch;margin:0}
 .example-panel.dark .example-lead{color:#f6efe4}
 .microcopy{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--muted)}
 

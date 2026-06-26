@@ -70,6 +70,8 @@ Geist is loaded from Google Fonts.
 
 ## Core Typographic Decision
 
+Geist is the default reading and interface layer. Paragraphs, body copy, lead copy, navigation, labels, captions, buttons and instructions use Geist.
+
 Redaction 20 is the XXL display face for hero-scale titles where Redaction 35 becomes too pixelated.
 
 Redaction 20 Italic and Redaction 35 Italic are accent voices for short editorial interruptions, not default emphasis styles.
