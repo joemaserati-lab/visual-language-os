@@ -11,7 +11,7 @@ function setupWord(el){
   const order=seededOrder(text.length || 1);
   [...text].forEach((char,i)=>{
     const span=document.createElement('span');
-    span.textContent=char===' ' ? '\u00A0' : char;
+    span.textContent=char===' ' ? ' ' : char;
     span.dataset.order=order.indexOf(i);
     el.appendChild(span);
   });
@@ -28,7 +28,7 @@ function updateWord(el){
     const delay=Number(span.dataset.order)/(spans.length||1)*.28;
     const p=Math.min(1,Math.max(0,(progress-delay)/(1-delay)));
     const stateIndex=Math.min(states.length-1,Math.floor(p*states.length));
-    span.style.fontFamily=`'${states[stateIndex]}','Redaction 35','Geist',sans-serif`;
+    span.style.fontFamily=`'${states[stateIndex]}','Redaction 35','Geist Variable',serif`;
     span.style.transform=`translateY(${(1-p)*.06}em)`;
   });
 }
@@ -37,4 +37,4 @@ function loop(){words.forEach(updateWord);requestAnimationFrame(loop)}
 
 words.forEach(setupWord);
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){loop();}
-else{words.forEach(el=>{el.style.fontFamily="'Redaction 35','Geist',sans-serif";});}
+else{words.forEach(el=>{el.style.fontFamily="'Redaction 35','Geist Variable',serif";});}

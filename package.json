@@ -1,0 +1,25 @@
+{
+  "name": "visual-language-os-local",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "latest",
+    "@fontsource-variable/geist-mono": "latest",
+    "@fontsource/redaction": "latest",
+    "@fontsource/redaction-10": "latest",
+    "@fontsource/redaction-20": "latest",
+    "@fontsource/redaction-35": "latest",
+    "@fontsource/redaction-50": "latest",
+    "@fontsource/redaction-70": "latest",
+    "@fontsource/redaction-100": "latest"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}

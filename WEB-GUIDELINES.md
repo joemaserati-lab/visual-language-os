@@ -2,80 +2,87 @@
 
 Operational guide for building pages inside Visual Language OS.
 
-This document defines the decisions to follow when designing, writing and implementing web pages for the system. It is not a decorative style guide and it is not a template. It is a set of operating rules that keep typography, hierarchy, motion, components and content aligned.
+This document is not a decorative style guide. It is a production specification for typography, hierarchy, motion, components, accessibility and delivery. Every rule must be traceable to a purpose, a perceptual principle, a validated pattern or a production constraint.
 
-## Purpose
+## 1. Core Positioning
 
-Visual Language OS exists to make design quality traceable.
+Visual Language OS uses type as the first interface. The portfolio can have a pixel/editorial attitude, but readability and decision clarity remain non-negotiable.
 
-Every page should make clear why a visual decision exists. Taste can guide direction, but final decisions must connect to a purpose, a perceptual principle, a validated pattern or a production constraint.
+The system keeps the Redaction + Geist direction:
 
-Use this guide when creating or reviewing:
+- Redaction is the identity layer.
+- Geist is the reading and interface layer.
+- Geist Mono is the technical/indexical layer.
+- Redaction 50/70/100 are pixel states, not default reading states.
 
-- Documentation pages
-- System pages
-- Pattern pages
-- Reference implementations
-- Laboratory experiments
-- Portfolio or case-study modules based on the system
+The governing rule is simple: Redaction signs the page; Geist makes the page usable.
 
-## Core Principles
+## 2. Font Delivery Policy
 
-### 1. Hierarchy Before Color
+Fonts are not uploaded manually and are not pulled from Google Fonts at runtime. The typography stack is installed through Fontsource and bundled through Vite.
 
-The page must communicate structure through typography, spacing, scale and contrast before color is considered.
+This keeps the system versionable, portable and reviewable.
 
-If a page only works because of color, the hierarchy is weak.
+Install fonts as npm dependencies:
 
-### 2. Typography Is The First Interface
+```bash
+npm install @fontsource-variable/geist @fontsource-variable/geist-mono
+npm install @fontsource/redaction @fontsource/redaction-10 @fontsource/redaction-20 @fontsource/redaction-35 @fontsource/redaction-50 @fontsource/redaction-70 @fontsource/redaction-100
+```
 
-Text is the primary way users understand position, priority and action.
+Import critical fonts in `assets/js/app.js`:
 
-Use semantic HTML first, then apply visual treatment. A page should remain understandable when styles are reduced.
+```js
+import "@fontsource-variable/geist/wght.css";
+import "@fontsource-variable/geist-mono/wght.css";
+import "@fontsource/redaction/400.css";
+import "@fontsource/redaction-10/400.css";
+import "@fontsource/redaction-20/400.css";
+import "@fontsource/redaction-35/400.css";
+```
 
-### 3. Motion Must Reveal Information
+Load Redaction 50/70/100 only where a page uses progressive recognition, laboratory specimens or pixel state demos. They are not global UI assets.
 
-Motion is a sequencing layer. It should reveal, connect, clarify, orient or confirm.
+Production rule: font loading is part of design governance. If a font is not needed above the fold, it should not be part of the critical path.
 
-If movement only adds spectacle and does not improve comprehension, remove it.
+## 3. Font Roles
 
-### 4. Reusable Does Not Mean Generic
+| Font | Role | Use | Avoid |
+| --- | --- | --- | --- |
+| Geist Variable | Reading and UI | Paragraphs, lead copy, navigation, buttons, labels, instructions | Large expressive statements |
+| Geist Mono Variable | Technical metadata | Codes, versions, coordinates, token values, file names | Paragraphs and long descriptions |
+| Redaction | Base editorial bridge | Neutral display fallback | Body copy |
+| Redaction 10 | Clean display | Large title moments where pixel texture must stay subtle | Motion/noise states |
+| Redaction 20 | XXL display | Hero-scale titles and oversized page statements | Navigation, buttons, paragraphs |
+| Redaction 35 | Main display | Editorial headings, section titles, short identity moments | Dense longform |
+| Redaction 50 | Threshold state | Transitional recognition, experiments | Final reading state |
+| Redaction 70 | Abstract state | Motion sequence, texture, pre-reading | Functional text |
+| Redaction 100 | Noise state | Texture, abstraction, first recognition stage | Any content needed for immediate comprehension |
 
-Components should repeat decisions, not erase character.
+## 4. Typographic Tokens
 
-A reusable module must still have a clear job, usage boundary and visible proof.
+Every text role must declare font, size, leading, tracking, measure and usage boundary.
 
-### 5. Experiments Become Laws Slowly
+| Role | Font | Size logic | Leading | Tracking | Measure | Use |
+| --- | --- | --- | --- | --- | --- | --- |
+| Hero display | Redaction 20 / Redaction 10 | `clamp(5rem, 13vw, 14rem)` desktop, capped lower on mobile | `.82–.9` | `-0.045em` to `-0.06em` | `9–11ch` | Home hero, manifesto statements |
+| Page H1 | Redaction 35 / Redaction 10 | `clamp(3.25rem, 7vw, 7rem)` | `1` | `-0.035em` to `-0.045em` | `12–14ch` | Page argument |
+| Section H2 | Redaction 35 | `clamp(2.4rem, 4.5vw, 4.75rem)` | `1.04–1.08` | `-0.02em` to `-0.03em` | `14–18ch` | New conceptual section |
+| Module H3 | Redaction 35 / Geist | `clamp(1.7rem, 2.6vw, 2.6rem)` | `1.1` | `-0.01em` to `-0.018em` | `16–20ch` | Cards, rules, repeated modules |
+| Lead | Geist Variable | `clamp(1.2rem, 2vw, 1.75rem)` | `1.35–1.45` | `-0.012em` max | `46–56ch` | Page or section thesis |
+| Body | Geist Variable | `clamp(1rem, 1.1vw, 1.15rem)` | `1.5–1.65` | `0` | `56–72ch` | Reasoning, explanation, case studies |
+| Meta | Geist Mono Variable | `.72rem–.875rem` | `1.3–1.45` | `0.02em–0.12em` depending on density | Short | Eyebrows, versions, labels |
+| Pixel state | Redaction 50/70/100 | Large only | Tight | Negative allowed | One word / short phrase | Motion/lab only |
 
-New visual ideas start in the laboratory. A pattern becomes stable only after it is prototyped, stress-tested, applied in a reference page and documented with limits.
+Do not use one title rule for every context. Hero, section, longform and project pages have different typographic jobs.
 
-## Page Structure
-
-Use a consistent page anatomy so users can predict how to read the system.
-
-### Shell
-
-Every documentation page uses the same high-level layout:
-
-- Sidebar navigation
-- Main content area
-- Page hero
-- Structured sections
-- Footer metadata
+## 5. Context Rules
 
 ### Hero
 
-The hero introduces the page argument.
+The hero introduces the page argument. It can use strong Redaction, but it must remain readable before the user reaches the focal center.
 
-Required elements:
-
-- Eyebrow for section metadata
-- One `h1` that states the page argument
-- One lead paragraph that explains the purpose of the page
-
-The `h1` should not be a generic category label when a stronger statement is possible.
-
-Use:
+Required anatomy:
 
 ```html
 <p class="eyebrow">System / Typography</p>
@@ -83,164 +90,59 @@ Use:
 <p class="hero-lead">Redaction gives identity. Geist gives clarity.</p>
 ```
 
-Avoid:
+### Section
 
-```html
-<h1>Typography</h1>
-```
-
-### Sections
-
-Each section should introduce one decision layer only.
-
-Good section purposes:
-
-- Rule set
-- Component specification
-- Pattern anatomy
-- Example group
-- Token table
-- Do / Don't comparison
-- Validation path
-
-Do not combine unrelated purposes in the same section.
-
-### Grid
-
-Use grid layouts to create comparison, not decoration.
-
-Common splits:
-
-- `span-5` for explanation and `span-7` for examples
-- Three `span-4` cards for equal concepts
-- Two `span-6` examples for contrast
-- Four `span-3` specimens for sequences
-
-The left side usually explains the decision. The right side usually proves it.
-
-### Footer
-
-Use the footer for page identity and version context only.
-
-Avoid adding important navigation or primary actions only in the footer.
-
-## Typography Rules
-
-The system uses Redaction for identity and Geist for clarity.
-
-### Font Roles
-
-| Font | Role | Use |
-| --- | --- | --- |
-| Redaction 20 | XXL display | Hero-scale titles and oversized page statements |
-| Redaction 20 Italic | XXL accent | Oversized editorial interruptions and expressive hero contrast |
-| Redaction 35 | Readable display | Editorial headings, section titles, short identity moments |
-| Redaction 35 Italic | Editorial accent | Quotes, short insertions, tension words and secondary voice moments |
-| Redaction 50 | Threshold state | Transitional recognition, experimental specimens |
-| Redaction 70 | Abstract state | Motion sequence, texture, pre-reading state |
-| Redaction 100 | Noise state | Texture, abstraction, first recognition stage |
-| Geist | Information | Paragraphs, labels, UI text, navigation, metadata |
-
-### Redaction Rules
-
-Redaction is the display and editorial layer. It is not the reading layer.
-
-Use Redaction 20 for XXL titles when Redaction 35 becomes too pixelated at hero scale.
-
-Use Redaction 35 when the text must be both expressive and readable at normal heading scale.
-
-Use Redaction Italic as an intentional accent voice, not as automatic emphasis. It works best when it creates editorial contrast, tension or a second voice inside a disciplined layout.
-
-Use Redaction 20 Italic for oversized hero accents. Use Redaction 35 Italic for short editorial insertions, quoted fragments and expressive phrases.
-
-Do not use Redaction or Redaction Italic for navigation, buttons, labels, instructions, body copy or accessibility-critical interface text.
-
-Use Redaction 50, 70 and 100 as transitional or experimental states only. They are not final reading states.
-
-Recommended progressive sequence:
-
-```txt
-Redaction 100 -> Redaction 70 -> Redaction 50 -> Redaction 35
-```
-
-The readable state must arrive before the element reaches the user's main focal zone.
-
-### Geist Rules
-
-Geist is the default reading and interface layer.
-
-Always use Geist for:
-
-- Body copy
-- Paragraphs
-- Lead copy
-- Navigation
-- Buttons
-- Labels
-- Captions
-- Metadata
-- Interface instructions
-
-Geist should carry clarity. Do not use expressive Redaction states for functional text, continuous reading or any content that asks the user to decide, navigate or act.
-
-### Type Hierarchy
-
-Use one real `h1` per page.
-
-Use `h2` for new conceptual sections: systems, examples, methods, validation blocks or component groups.
-
-Use `h3` for modules inside sections: cards, examples, repeated components or local titles.
-
-Use paragraphs for reasoning, not slogans.
-
-Use small text for metadata only. Small text must never carry the primary message.
-
-### Writing Headings
-
-Headings should name a decision, not merely describe a container.
+Each section introduces one decision layer only. Use `h2` to name the decision, not the container.
 
 Use:
 
-- `Typography is the first interface.`
 - `Motion must reveal information.`
+- `Hierarchy works before color.`
 - `Noise becomes language.`
-- `Reusable does not mean generic.`
 
 Avoid:
 
 - `Typography`
-- `Motion`
 - `Section 1`
 - `Information`
 
-## Motion Rules
+### Prose / Case Study
 
-Motion must make sequence visible.
+Longform pages should become calmer than the homepage. Use Geist for the reading path, Redaction 10 or 35 for sparse structural headings, and keep paragraphs within 56–72ch.
 
-### Motion Jobs
+If the page has multiple technical sections, prioritize scannability over expressive density.
 
-Every motion decision must do at least one of these jobs:
+### Navigation and UI
 
-- Reveal information
-- Connect related states
-- Clarify reading order
-- Orient the user in space
-- Confirm an interaction
+Navigation, buttons, labels and instructions use Geist or Geist Mono. Redaction is not used for functional UI.
 
-If no job is present, the motion is decorative and should be removed.
+Inline links inside prose must be underlined or otherwise distinguished without relying only on color.
 
-### Timing Bands
+### Laboratory
 
-| Timing | Role | Use |
-| --- | --- | --- |
-| 120ms | Micro acknowledgement | Button press, focus change |
-| 240ms | Interface transition | Hover, compact panel, navigation state |
-| 480ms | Content reveal | Cards, sections, local transformations |
-| 900-1400ms | Scroll transformation | Progressive recognition, editorial moments |
+The laboratory can use Redaction 50/70/100, but every experiment must document purpose, failure mode and fallback.
 
-### Progressive Recognition
+## 6. Responsive Rules
 
-Progressive Recognition is the core motion pattern of the system.
+The system uses more than one responsive state. Typography scales by context, not by a single breakpoint.
+
+| Viewport | Body | Measure | H1 target | Notes |
+| --- | --- | --- | --- | --- |
+| Mobile 320–599 | `16px` | `36–42ch` | `2.25–3.2rem` | Reduce tracking negativity, avoid overlong hero lines |
+| Tablet 600–1023 | `17px` | `42–56ch` | `3–4.5rem` | Sidebar may remain but density must reduce |
+| Desktop 1024–1439 | `17.5–18px` | `56–68ch` | `4–5.5rem` | Main documentation state |
+| Wide 1440+ | `18px max` | `68–72ch max` | Hero display only grows | Do not widen paragraphs indefinitely |
+
+Rules:
+
+- Paragraphs do not expand because the viewport expands.
+- Hero typography may scale more aggressively than body typography.
+- On mobile, reduce negative tracking and raise line-height for multiline headings.
+- Grids collapse by reading priority, not just by column count.
+
+## 7. Progressive Recognition
+
+Progressive Recognition is the core motion pattern.
 
 The user should perceive:
 
@@ -248,387 +150,83 @@ The user should perceive:
 matter -> shape -> word -> meaning
 ```
 
-Use it for:
+Sequence:
 
-- Hero words
-- Section transitions
-- Large editorial modules
-- Laboratory experiments
+```txt
+Redaction 100 -> Redaction 70 -> Redaction 50 -> Redaction 35
+```
 
-Avoid it for:
+Use it for hero words, section transitions, large editorial modules and laboratory experiments.
 
-- Navigation
-- Buttons
-- Body copy
-- Forms
-- Any text needed for immediate comprehension
+Avoid it for navigation, buttons, body copy, forms and any text needed for immediate comprehension.
 
-The pattern fails if the readable state arrives too late.
+Failure condition: if the readable state arrives after the focal zone, the pattern is rejected.
 
-### Reduced Motion And Fallbacks
+## 8. Accessibility Rules
 
-Functional meaning must not depend on animation.
+Accessibility is part of the type system, not a separate review pass.
 
-When motion is unavailable or reduced:
-
-- Text remains readable
-- Hierarchy remains clear
-- Actions remain visible
-- Page order still makes sense
-
-Never hide essential information behind motion.
-
-## Component Rules
-
-Components translate system rules into repeatable interface decisions.
-
-Choose the smallest stable component that communicates the job.
-
-### Button
-
-Purpose: trigger one clear action.
-
-Use rules:
-
-- Use short, verb-led labels
-- Use one emphasis button per decision area
-- Use spacing before color to make action visible
-- Use buttons for actions, not ordinary navigation
-
-Avoid when:
-
-- The target is pure navigation
-- The link is repeated metadata
-- The action is secondary text reference
-
-### Badge
-
-Purpose: label status, category or system role.
-
-Use rules:
-
-- Keep text brief
-- Use before headings, inside specimens or as state markers
-- Do not let badges compete with headings
-
-Avoid when:
-
-- The badge becomes the main message
-- The label needs complex explanation
-
-### Card
-
-Purpose: group one idea, rule or destination into a contained reading unit.
-
-Use rules:
-
-- Include eyebrow, title and short explanation
-- Cards in a grid should have comparable weight
-- The card should work without decorative effects
-
-Avoid when:
-
-- Content needs sequential reading
-- Content requires dense comparison
-- The card would split a single narrative into fragments
-
-### Rule Block
-
-Purpose: codify a decision as a named principle.
-
-Use rules:
-
-- Pair a compact identifier with a decisive title
-- Add one explanatory paragraph
-- Keep the block direct and reusable
-
-Avoid when:
-
-- Content is promotional
-- The point is optional commentary
-- The explanation requires a long essay
-
-### Token Table
-
-Purpose: compare tokens, timings or named values.
-
-Use rules:
-
-- Keep columns predictable
-- Make token values easy to scan
-- Use for stable values, not narrative content
-
-### Project Card
-
-Purpose: preview a project, case study or reference item with editorial weight.
-
-Use rules:
-
-- Use a short eyebrow
-- Use a strong descriptive title
-- Include a clear destination cue
-
-Avoid when:
-
-- The item is a utility link
-- The list is generic
-- There is no editorial value to preview
-
-### CTA Block
-
-Purpose: close a section with one focused action.
-
-Use rules:
-
-- One statement
-- One supporting paragraph
-- One action
-- No competing links inside the block
-
-Avoid when:
-
-- The user still needs comparison
-- The section still needs education
-- Multiple decision paths are required
-
-### Navigation Item
-
-Purpose: move users between stable sections and show current location.
-
-Use rules:
-
-- Keep labels short
-- Prefer noun-based labels
-- Make active state clear without animation
-
-Avoid when:
-
-- The destination is temporary
-- The destination is promotional
-- The target is better represented as an action
-
-## Content Rules
-
-Design quality depends on writing quality. Copy should clarify decisions, not decorate the interface.
-
-### Voice
-
-Use concise, direct and instructional language.
-
-The voice should feel:
-
-- Editorial
-- Precise
-- Operational
-- Calm
-- Traceable
-
-Avoid language that is vague, inflated or purely promotional.
-
-### Page Lead
-
-The lead paragraph should answer:
-
-- What is this page about?
-- Why does it matter?
-- How should the reader use it?
-
-### Paragraphs
-
-Paragraphs should explain evidence, purpose or constraints.
-
-Avoid paragraphs that repeat the heading without adding information.
-
-### Microcopy
-
-Microcopy should label context, not create a second message.
-
-Use it for:
-
-- Version information
-- Category labels
-- State labels
-- Timing labels
-- Component metadata
-
-### CTA Copy
-
-CTA labels should be short and action-oriented.
-
-Use:
-
-- `Read system`
-- `Start project`
-- `Apply rule`
-- `Continue`
-
-Avoid:
-
-- `Click here`
-- `Learn more about this thing`
-- `Submit` without context
-
-## Accessibility Rules
-
-Accessibility is not a separate pass. It is part of the system.
-
-### Semantic HTML
-
-Use semantic structure before visual styling.
+| WCAG area | Rule in this system |
+| --- | --- |
+| 1.4.1 Use of Color | Inline links cannot rely only on color. Prose links use underline or another non-color signal. |
+| 1.4.3 Contrast Minimum | Text contrast must be checked for every light, dark and emphasis component. |
+| 1.4.4 Resize Text | Layout must remain usable at 200% zoom. Test hero, sidebar, cards and tables. |
+| 1.4.12 Text Spacing | Page must survive user overrides for line-height, paragraph spacing, letter spacing and word spacing. |
+| 1.4.5 Images of Text | Do not render critical text as image. Display statements remain live text. |
+| 2.4.6 Headings and Labels | Headings describe purpose or topic, not generic containers. |
 
 Required practices:
 
-- One `h1` per page
-- Ordered heading hierarchy
-- Real links for navigation
-- Real buttons for actions when needed
-- Meaningful link text
-- Descriptive `aria-label` only when visible text is not enough
+- One real `h1` per page.
+- Ordered heading hierarchy.
+- Real links for navigation.
+- Real buttons for actions.
+- Meaningful link text.
+- Reduced-motion fallback.
+- Readable font fallback.
+- Functional text readable without animation.
 
-### Readability
+## 9. Performance Budget
 
-Functional text must be readable immediately.
+Font performance is a production constraint.
 
-Never use Redaction 70 or 100 for:
+| Budget | Target |
+| --- | --- |
+| Critical font requests | `1–2` preferred, `3` maximum if justified |
+| Critical font payload | Keep as low as possible; do not put all Redaction pixel states above the fold |
+| Runtime Google Fonts | `0` |
+| Manual unmanaged font uploads | `0` |
+| Font format | WOFF2 through Fontsource/Vite build |
+| Non-critical pixel states | Conditional page-level loading |
 
-- Navigation
-- Buttons
-- Body copy
-- Form labels
-- Error messages
-- Accessibility-critical UI
+Redaction 50/70/100 belong to demo/lab/progressive recognition contexts. They must not be treated as default global fonts unless the page visibly needs them.
 
-### Contrast
+## 10. Production Checklist
 
-Color supports hierarchy but does not create it.
+Before shipping a page, verify:
 
-Before relying on color, check whether the page still communicates through:
+- Typography roles are respected.
+- Redaction is not used for body copy.
+- Geist is used for all functional text.
+- Geist Mono is limited to technical/indexical metadata.
+- No Google Fonts runtime import remains.
+- No unmanaged font files are required.
+- Pixel Redaction states are not loaded without a page-level need.
+- Inline prose links have a non-color affordance.
+- Motion has a purpose and reduced-motion fallback.
+- Layout works across mobile, tablet, desktop and wide.
+- The page remains understandable without expressive motion.
+- The page is still usable at 200% zoom.
+- Contrast has been checked for light, dark and emphasis states.
 
-- Type size
-- Spacing
-- Weight
-- Position
-- Rhythm
-- Border or structural contrast
+## 11. Decision Log
 
-### Mobile
+Current approved direction:
 
-Every page must work on small screens.
-
-Check:
-
-- Sidebar/navigation behavior
-- Grid collapse
-- Line length
-- Tap targets
-- Large display text wrapping
-- Motion performance
-- Horizontal overflow
-
-### Performance
-
-Keep the site static, readable and fast.
-
-Avoid adding heavy dependencies unless the system cannot express the behavior with existing HTML, CSS and small JavaScript.
-
-## Implementation Checklist
-
-Use this before publishing a new page or major section.
-
-### Structure
-
-- The page has one clear argument
-- The page uses one `h1`
-- Sections each contain one decision layer
-- Navigation shows the active location
-- Footer contains only metadata
-
-### Typography
-
-- Geist is used for all bodycopy, paragraphs, lead copy and interface text
-- Redaction 20 is used for XXL display titles only
-- Redaction 20 Italic is used only for oversized editorial accents
-- Redaction 35 is used for display headings below XXL scale
-- Redaction 35 Italic is used only for short editorial accent moments
-- Redaction 50, 70 and 100 are only used as transitional or experimental states
-- Geist is used for body, labels and UI text
-- Headings name decisions instead of containers
-- Body copy explains purpose, evidence or limits
-
-### Motion
-
-- Every motion choice has a job
-- Functional text does not wait for motion to become readable
-- Progressive Recognition completes before the focal zone
-- Reduced-motion fallback preserves meaning
-
-### Components
-
-- Each component has a clear purpose
-- Variants reduce ambiguity
-- The smallest stable component is reused
-- CTA blocks contain one action only
-- Cards group one idea each
-
-### Accessibility
-
-- Heading order is logical
-- Links and actions are understandable
-- Text remains readable without animation
-- Color is not the only differentiator
-- Mobile layout has no horizontal overflow
-
-### Production
-
-- File paths are relative and GitHub Pages-safe
-- Fonts load or degrade cleanly
-- JavaScript is optional for comprehension
-- The page still works as static HTML
-- New patterns are documented with use cases and limits
-
-## Do / Don't
-
-### Do
-
-- Start with the purpose of the page
-- Make hierarchy visible before adding color
-- Use Redaction 20 for oversized hero identity
-- Use Redaction Italic as a controlled editorial second voice
-- Use Redaction 35 for display identity below XXL scale
-- Use Geist for information, reading and interface text
-- Use motion to reveal sequence
-- Document the limits of each pattern
-- Keep components specific and purposeful
-- Validate experiments before turning them into laws
-
-### Don't
-
-- Use Redaction 100 as body copy
-- Use any Redaction face for paragraphs or bodycopy
-- Use Redaction Italic as default emphasis for functional text
-- Make navigation wait for animation
-- Add motion because the static layout feels weak
-- Create a new component when an existing one works
-- Let badges or metadata carry the main message
-- Use color as the only hierarchy tool
-- Split one narrative into too many cards
-- Publish a pattern without usage boundaries
-
-## Reference Pages
-
-Existing pages that demonstrate these rules:
-
-- `index.html` for the system overview
-- `mindset.html` for decision process
-- `systems/typography.html` for type hierarchy and font roles
-- `systems/motion.html` for timing and sequencing
-- `systems/components.html` for component purpose and variants
-- `patterns/progressive-recognition.html` for the core motion pattern
-- `reference/index.html` for applied page composition
-- `laboratory/index.html` for experiments and validation flow
-
-## Version
-
-Current guideline version: `v0.2`
-
-This document should evolve when a rule becomes stable enough to guide production work.
+- Keep Redaction + Geist.
+- Use Fontsource for both families.
+- Use Geist Variable for reading/UI.
+- Use Geist Mono Variable for metadata and technical rhythm.
+- Use Redaction 10/20/35 as display system.
+- Use Redaction 50/70/100 only as pixel/motion states.
+- Treat performance, accessibility and licensing provenance as part of the design system, not as implementation afterthoughts.
